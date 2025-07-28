@@ -1,21 +1,24 @@
 import Image from "next/image";
 import { Check } from "lucide-react";
 import type { productInfoProps } from "@/app/catalog/page";
+import { JSX } from "react";
 
 export default function Product({
   productInfo,
+  Logo,
 }: {
   productInfo: productInfoProps;
+  Logo: JSX.Element;
 }) {
   return (
-    <div className="flex flex-col justify-center gap-20 max-w-[1400px] my-50 mx-auto">
-      <div>{productInfo.productElement}</div>
+    <div className="flex flex-col justify-center gap-20 max-w-[1500px] my-50 mx-auto">
+      <div>{Logo}</div>
 
-      <div className="flex flex-row justify-between items-center">
+      <div className="flex flex-row justify-between items-center w-full">
         <div className="flex flex-col gap-10 max-w-140">
           <p className="font-light text-2xl">{productInfo.mainText}</p>
 
-          <div className="bg-[url('/bg-list.jpeg')] bg-center bg-cover min-h-30">
+          <div className="bg-[url('/bg-list.png')] bg-center bg-cover min-h-30">
             <ul
               style={{ backgroundColor: productInfo.listColor }}
               className="font-bold h-[100%] text-xl text-white flex flex-col justify-center gap-3 p-4"
@@ -30,35 +33,33 @@ export default function Product({
           </div>
         </div>
 
-        <div className="flex flex-col w-140">
-          <div className="flex flex-row justify-between w-full items-center">
-            <div className="flex flex-col max-w-80">
-              <p className="text-lg">{productInfo.productText}</p>
-              <p className="font-extrabold text-3xl uppercase text-[#e72e4d]">
-                {productInfo.availableIn}
-              </p>
-              <div className="flex flex-row mt-3 gap-2 items-center flex-wrap">
-                {productInfo.availableImgs.map((img, i) => (
-                  <Image
-                    key={i}
-                    src={img.src}
-                    width={50}
-                    height={50}
-                    className={`w-${img.size}`}
-                    alt={`animal-${i}`}
-                  />
-                ))}
-              </div>
+        <div className="flex flex-row justify-center items-center">
+          <div className="flex flex-col w-70">
+            <p className="text-lg">{productInfo.productText}</p>
+            <p className="font-extrabold text-3xl uppercase text-[#e72e4d]">
+              {productInfo.availableIn}
+            </p>
+            <div className="flex flex-row mt-3 gap-2 items-center flex-wrap">
+              {productInfo.availableImgs.map((img, i) => (
+                <Image
+                  key={i}
+                  src={img.src}
+                  width={50}
+                  height={50}
+                  className={`w-${img.size}`}
+                  alt={`animal-${i}`}
+                />
+              ))}
             </div>
-            <div className="w-50">
-              <Image
-                src={productInfo.img}
-                width={362}
-                height={349}
-                alt="Зображення продукту"
-                className="min-h-50 w-70"
-              />
-            </div>
+          </div>
+          <div>
+            <Image
+              src={productInfo.img}
+              width={7952}
+              height={5304}
+              alt="Зображення продукту"
+              className="max-w-100 max-h-100"
+            />
           </div>
         </div>
       </div>

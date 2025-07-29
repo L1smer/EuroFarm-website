@@ -6,12 +6,14 @@ import { JSX } from "react";
 export default function Product({
   productInfo,
   Logo,
+  animals,
 }: {
   productInfo: productInfoProps;
   Logo: JSX.Element;
+  animals: string[];
 }) {
   return (
-    <div className="flex flex-col justify-center gap-20 max-w-[1500px] my-50 mx-auto">
+    <div className="flex flex-col gap-15 justify-center">
       <div>{Logo}</div>
 
       <div className="flex flex-row justify-between items-center w-full">
@@ -33,13 +35,13 @@ export default function Product({
           </div>
         </div>
 
-        <div className="flex flex-row justify-center items-center">
-          <div className="flex flex-col w-70">
+        <div className="flex flex-row justify-center items-center max-w-200">
+          <div className="flex flex-col">
             <p className="text-lg">{productInfo.productText}</p>
-            <p className="font-extrabold text-3xl uppercase text-[#e72e4d]">
-              {productInfo.availableIn}
+            <p className="font-extrabold text-3xl uppercase text-[#e72e4d] max-w-100">
+              {productInfo.availableIn.length === animals.length ? "всіх видів тварин" : productInfo.availableIn.join()}
             </p>
-            <div className="flex flex-row mt-3 gap-2 items-center flex-wrap">
+            <div className="flex flex-row mt-3 gap-2 max-w-60 items-center flex-wrap">
               {productInfo.availableImgs.map((img, i) => (
                 <Image
                   key={i}

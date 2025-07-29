@@ -31,8 +31,12 @@
       }
     ],
     "img": "/mixoil.png",
-    "availableIn": "птахи, свині, жуйні тварини",
-    "productText": "Доступно для такої категорії тварин:",
+    "availableIn": [
+      "птахи",
+      "свині",
+      "жуйні тварини"
+    ],
+    "productText": "Доступно для таких тварин:",
     "tableTitle": "Дозування",
     "tableP": "MixOil порошок",
     "dosageInfo": {
@@ -91,8 +95,12 @@
       }
     ],
     "img": "/mixoil.png",
-    "availableIn": "птахи, свині, жуйні тварини",
-    "productText": "Доступно для такої категорії тварин:",
+    "availableIn": [
+      "птахи",
+      "свині",
+      "жуйні тварини"
+    ],
+    "productText": "Доступно для таких тварин:",
     "tableTitle": "Дозування",
     "tableP": "MixOil порошок",
     "dosageInfo": {
@@ -155,8 +163,11 @@
       }
     ],
     "img": "/mixoilplusaqua.png",
-    "availableIn": "риба та креветки",
-    "productText": "Доступно для такої категорії тварин:",
+    "availableIn": [
+      "риба",
+      "креветки"
+    ],
+    "productText": "Доступно для таких тварин:",
     "tableTitle": "Дозування",
     "tableP": "MixOil порошок",
     "dosageInfo": {
@@ -211,7 +222,11 @@
       }
     ],
     "img": "/airoil.png",
-    "availableIn": "птиця, свині, жуйні тварини",
+    "availableIn": [
+      "птахи",
+      "свині",
+      "жуйні тварини"
+    ],
     "productText": "Доступно для таких тварин:",
     "tableTitle": "Дозування",
     "tableP": "",
@@ -272,7 +287,9 @@
       }
     ],
     "img": "/coxxoil.png",
-    "availableIn": "птиця",
+    "availableIn": [
+      "птахи"
+    ],
     "productText": "Доступно для таких тварин:",
     "tableTitle": "Дозування",
     "tableP": "",
@@ -320,7 +337,10 @@
       }
     ],
     "img": "/immunoil.png",
-    "availableIn": "птиця, свині",
+    "availableIn": [
+      "птахи",
+      "свині"
+    ],
     "productText": "Доступно для таких тварин:",
     "tableTitle": "Дозування",
     "tableP": "",
@@ -368,7 +388,12 @@
       }
     ],
     "img": "/4powerx.png",
-    "availableIn": "птиця, свині, жуйні, аквакультура",
+    "availableIn": [
+      "птахи",
+      "свині",
+      "жуйні тварини",
+      "аквакультура"
+    ],
     "productText": "Доступно для таких тварин:",
     "tableTitle": "Дозування",
     "tableP": "",
@@ -424,7 +449,7 @@
       }
     ],
     "img": "/wlf.jpg",
-    "availableIn": "птиця, свині",
+    "availableIn": ["птахи", "свині"],
     "productText": "Доступно для таких тварин:",
     "tableTitle": "Дозування",
     "tableP": "",
@@ -488,7 +513,7 @@
       }
     ],
     "img": "/toxinfibre.jpg",
-    "availableIn": "птахи , свині, жуйні тварини, аквакультура",
+    "availableIn": ["птахи", "свині", "жуйні тварини", "аквакультура"],
     "productText": "Доступно для таких тварин:",
     "tableTitle": "Дозування",
     "tableP": "",
@@ -559,7 +584,7 @@
       }
     ],
     "img": "/prenat.png",
-    "availableIn": "всі види тварин",
+    "availableIn": ["птахи", "свині", "жуйні тварини", "аквакультура", "риба", "креветки"],
     "productText": "Доступно для таких тварин:",
     "tableTitle": "Дозування",
     "tableP": "",

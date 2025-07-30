@@ -15,6 +15,10 @@ import FourPowerX from "./logos/FourPowerX";
 import Wlf from "./logos/Wlf";
 import Toxinfibre from "./logos/Toxinfibre";
 import PreNat from "./logos/PreNat";
+import ForLife from "./logos/ForLife";
+import Dermosan from "./logos/Dermosan";
+import MustGel from './logos/MustGel'
+import MustTwo from "./logos/MustTwo";
 
 export type productInfoProps = {
   mainText: string;
@@ -28,13 +32,11 @@ export type productInfoProps = {
   img: string;
   availableIn: string[];
   productText: string;
-  tableTitle: string;
-  tableP: string;
   dosageInfo: {
     availability: string;
     products: {
-      form: string;
-      dosage: {
+      form?: string;
+      productInfo: {
         species: string;
         value: string;
       }[];
@@ -53,6 +55,10 @@ const logoMap: Record<string, JSX.Element> = {
   Wlf: <Wlf />,
   Toxinfibre: <Toxinfibre />,
   PreNat: <PreNat />,
+  ForLife: <ForLife/>,
+  Dermosan: <Dermosan/>,
+  MustGel: <MustGel/>,
+  MustTwo: <MustTwo/>
 };
 
 export default function Catalog() {
@@ -66,6 +72,7 @@ export default function Catalog() {
     "риба",
     "креветки",
     "аквакультура",
+    "телята"
   ];
 
   useClickOutside(dropdownRef, () => setOpen(false));

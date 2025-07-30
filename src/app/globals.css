@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+@layer utilities {
+  .shadow-text {
+    text-shadow: 3px 2px 2px rgba(0, 0, 0, 0.25);
+  }
+}
+
 :root {
   --background: #ffffff;
   --foreground: #2c2e35;

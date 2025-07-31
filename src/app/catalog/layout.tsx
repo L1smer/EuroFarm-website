@@ -1,10 +1,6 @@
 import "../globals.css";
-import { Manrope } from "next/font/google";
-
-export const manrope = Manrope({
-  subsets: ["latin"],
-  weight: ["300",'400', "700", "800"],
-});
+import "../globals.css";
+import { manrope } from "@/app/lib/fonts"
 
 export default function RootLayout({
   children,

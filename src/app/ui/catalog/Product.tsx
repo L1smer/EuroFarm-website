@@ -68,13 +68,13 @@ export default function Product({
       </div>
 
       {/* Full-width Product Image */}
-      <div className="flex items-center justify-center w-full mt-6">
+      <div className="flex items-center justify-center w-full">
         <Image
           src={productInfo.img}
           width={1200}
           height={800}
           alt="Зображення продукту"
-          className="w-full max-w-4xl object-contain max-h-[500px]"
+          className="w-full max-w-4xl object-contain max-h-[300px] md:max-h-[500px]"
         />
       </div>
 

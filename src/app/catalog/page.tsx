@@ -130,7 +130,7 @@ export default function Catalog() {
         )}
       </div>
 
-      <div className="mt-20 flex flex-col gap-20 lg:gap-40">
+      <div className="mt-20 flex flex-col gap-30 lg:gap-40">
         {filteredProducts.map((product, i) => (
           <Product
             key={i}

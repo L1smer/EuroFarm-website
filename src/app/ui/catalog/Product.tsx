@@ -71,8 +71,8 @@ export default function Product({
       <div className="flex items-center justify-center w-full mt-6">
         <Image
           src={productInfo.img}
-          width={7952}
-          height={5304}
+          width={1200}
+          height={800}
           alt="Зображення продукту"
           className="w-full max-w-4xl object-contain max-h-[500px]"
         />

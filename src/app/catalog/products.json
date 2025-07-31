@@ -450,7 +450,7 @@
         "size": 12
       }
     ],
-    "img": "/wlf.jpg",
+    "img": "/wlf.png",
     "availableIn": [
       "птахи",
       "свині"
@@ -515,7 +515,7 @@
         "size": 12
       }
     ],
-    "img": "/toxinfibre.jpg",
+    "img": "/toxinfibre.png",
     "availableIn": [
       "птахи",
       "свині",

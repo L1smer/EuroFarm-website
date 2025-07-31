@@ -93,7 +93,7 @@ export default function Catalog() {
   });
 
   return (
-    <div className="max-w-[1500px] flex flex-col my-40 mx-auto">
+    <div className="max-w-[1600px] flex flex-col my-40 p-10 mx-auto">
       <div ref={dropdownRef} className="relative self-end text-left">
         <button
           onClick={() => setOpen(!open)}
@@ -131,7 +131,7 @@ export default function Catalog() {
         )}
       </div>
 
-      <div className="mt-20 flex flex-col gap-50">
+      <div className="mt-20 flex flex-col gap-20 lg:gap-40">
         {filteredProducts.map((product, i) => (
           <Product
             key={i}

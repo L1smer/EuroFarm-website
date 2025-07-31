@@ -62,7 +62,7 @@ const logoMap: Record<string, JSX.Element> = {
 
 export default function Catalog() {
   const [open, setOpen] = useState(false);
-  const dropdownRef = useRef<HTMLDivElement>(null!);
+  const dropdownRef = useRef<HTMLDivElement | null>(null);
   const [filterAnimals, setFilterAnimals] = useState<string[]>([]);
   const animals = [
     "птахи",

@@ -52,14 +52,14 @@ export default function Product({
               ? "всіх видів тварин"
               : productInfo.availableIn.join()}
           </p>
-          <div className="flex flex-row mt-2 gap-2 items-center flex-wrap">
+          <div className="flex flex-row justify-center mt-2 items-center flex-wrap">
             {productInfo.availableImgs.map((img, i) => (
               <Image
                 key={i}
                 src={img.src}
-                width={40}
-                height={40}
-                className={`w-${img.size}`}
+                width={100}
+                height={100}
+                className={`max-w-14`}
                 alt={`animal-${i}`}
               />
             ))}

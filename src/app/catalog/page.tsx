@@ -27,7 +27,6 @@ export type productInfoProps = {
   listColor: string;
   availableImgs: {
     src: string;
-    size: number;
   }[];
   img: string;
   availableIn: string[];
@@ -85,7 +84,7 @@ export default function Catalog() {
     );
   }
 
-  const filteredProducts = products.filter((product) => {
+  const filteredProducts:productInfoProps[] = products.filter((product:productInfoProps) => {
     if (filterAnimals.length === 0) {
       return true;
     }

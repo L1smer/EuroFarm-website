@@ -10,24 +10,19 @@
     "listColor": "rgba(148, 255, 77, 0.3)",
     "availableImgs": [
       {
-        "src": "/animals-imgs/chicken.png",
-        "size": 11
+        "src": "/animals-imgs/chicken.svg"
       },
       {
-        "src": "/animals-imgs/pig.png",
-        "size": 12
+        "src": "/animals-imgs/pig.svg"
       },
       {
-        "src": "/animals-imgs/bull.png",
-        "size": 11
+        "src": "/animals-imgs/bull.svg"
       },
       {
-        "src": "/animals-imgs/cow.png",
-        "size": 11
+        "src": "/animals-imgs/cow.svg"
       },
       {
-        "src": "/animals-imgs/sheep.png",
-        "size": 11
+        "src": "/animals-imgs/sheep.svg"
       }
     ],
     "img": "/mixoil.png",
@@ -72,24 +67,19 @@
     "listColor": "rgba(255, 221, 0, 0.3)",
     "availableImgs": [
       {
-        "src": "/animals-imgs/chicken.png",
-        "size": 11
+        "src": "/animals-imgs/chicken.svg"
       },
       {
-        "src": "/animals-imgs/pig.png",
-        "size": 12
+        "src": "/animals-imgs/pig.svg"
       },
       {
-        "src": "/animals-imgs/bull.png",
-        "size": 11
+        "src": "/animals-imgs/bull.svg"
       },
       {
-        "src": "/animals-imgs/cow.png",
-        "size": 11
+        "src": "/animals-imgs/cow.svg"
       },
       {
-        "src": "/animals-imgs/sheep.png",
-        "size": 11
+        "src": "/animals-imgs/sheep.svg"
       }
     ],
     "img": "/mixoil.png",
@@ -150,12 +140,10 @@
     "listColor": "rgba(0, 115, 255, 0.3)",
     "availableImgs": [
       {
-        "src": "/animals-imgs/fish.png",
-        "size": 12
+        "src": "/animals-imgs/fish.svg"
       },
       {
-        "src": "/animals-imgs/shrimp.png",
-        "size": 12
+        "src": "/animals-imgs/shrimp.svg"
       }
     ],
     "img": "/mixoilplusaqua.png",
@@ -203,24 +191,19 @@
     "listColor": "rgba(173, 216, 230, 0.3)",
     "availableImgs": [
       {
-        "src": "/animals-imgs/chicken.png",
-        "size": 12
+        "src": "/animals-imgs/chicken.svg"
       },
       {
-        "src": "/animals-imgs/pig.png",
-        "size": 13
+        "src": "/animals-imgs/pig.svg"
       },
       {
-        "src": "/animals-imgs/cow.png",
-        "size": 12
+        "src": "/animals-imgs/cow.svg"
       },
       {
-        "src": "/animals-imgs/sheep.png",
-        "size": 11
+        "src": "/animals-imgs/sheep.svg"
       },
       {
-        "src": "/animals-imgs/bull.png",
-        "size": 12
+        "src": "/animals-imgs/bull.svg"
       }
     ],
     "img": "/airoil.png",
@@ -282,8 +265,7 @@
     "listColor": "rgba(255, 192, 203, 0.3)",
     "availableImgs": [
       {
-        "src": "/animals-imgs/chicken.png",
-        "size": 12
+        "src": "/animals-imgs/chicken.svg"
       }
     ],
     "img": "/coxxoil.png",
@@ -326,12 +308,10 @@
     "listColor": "rgba(255, 99, 132, 0.3)",
     "availableImgs": [
       {
-        "src": "/animals-imgs/chicken.png",
-        "size": 12
+        "src": "/animals-imgs/chicken.svg"
       },
       {
-        "src": "/animals-imgs/pig.png",
-        "size": 12
+        "src": "/animals-imgs/pig.svg"
       }
     ],
     "img": "/immunoil.png",
@@ -367,28 +347,22 @@
     "listColor": "rgba(144, 238, 144, 0.3)",
     "availableImgs": [
       {
-        "src": "/animals-imgs/chicken.png",
-        "size": 12
+        "src": "/animals-imgs/chicken.svg"
       },
       {
-        "src": "/animals-imgs/pig.png",
-        "size": 12
+        "src": "/animals-imgs/pig.svg"
       },
       {
-        "src": "/animals-imgs/cow.png",
-        "size": 12
+        "src": "/animals-imgs/cow.svg"
       },
       {
-        "src": "/animals-imgs/sheep.png",
-        "size": 12
+        "src": "/animals-imgs/sheep.svg"
       },
       {
-        "src": "/animals-imgs/bull.png",
-        "size": 12
+        "src": "/animals-imgs/bull.svg"
       },
       {
-        "src": "/animals-imgs/fish.png",
-        "size": 12
+        "src": "/animals-imgs/fish.svg"
       }
     ],
     "img": "/4powerx.png",
@@ -442,12 +416,10 @@
     "listColor": "rgba(255, 204, 153, 0.3)",
     "availableImgs": [
       {
-        "src": "/animals-imgs/chicken.png",
-        "size": 12
+        "src": "/animals-imgs/chicken.svg"
       },
       {
-        "src": "/animals-imgs/pig.png",
-        "size": 12
+        "src": "/animals-imgs/pig.svg"
       }
     ],
     "img": "/wlf.png",
@@ -487,32 +459,25 @@
     "listColor": "rgba(153, 204, 255, 0.3)",
     "availableImgs": [
       {
-        "src": "/animals-imgs/chicken.png",
-        "size": 12
+        "src": "/animals-imgs/chicken.svg"
       },
       {
-        "src": "/animals-imgs/pig.png",
-        "size": 13
+        "src": "/animals-imgs/pig.svg"
       },
       {
-        "src": "/animals-imgs/fish.png",
-        "size": 13
+        "src": "/animals-imgs/fish.svg"
       },
       {
-        "src": "/animals-imgs/sheep.png",
-        "size": 12
+        "src": "/animals-imgs/sheep.svg"
       },
       {
-        "src": "/animals-imgs/hourse.png",
-        "size": 12
+        "src": "/animals-imgs/horse.svg"
       },
       {
-        "src": "/animals-imgs/cow.png",
-        "size": 12
+        "src": "/animals-imgs/cow.svg"
       },
       {
-        "src": "/animals-imgs/bull.png",
-        "size": 12
+        "src": "/animals-imgs/bull.svg"
       }
     ],
     "img": "/toxinfibre.png",
@@ -557,36 +522,28 @@
     "listColor": "rgba(255, 255, 153, 0.1)",
     "availableImgs": [
       {
-        "src": "/animals-imgs/chicken.png",
-        "size": 12
+        "src": "/animals-imgs/chicken.svg"
       },
       {
-        "src": "/animals-imgs/pig.png",
-        "size": 13
+        "src": "/animals-imgs/pig.svg"
       },
       {
-        "src": "/animals-imgs/fish.png",
-        "size": 13
+        "src": "/animals-imgs/fish.svg"
       },
       {
-        "src": "/animals-imgs/sheep.png",
-        "size": 12
+        "src": "/animals-imgs/sheep.svg"
       },
       {
-        "src": "/animals-imgs/hourse.png",
-        "size": 12
+        "src": "/animals-imgs/hourse.svg"
       },
       {
-        "src": "/animals-imgs/shrimp.png",
-        "size": 13
+        "src": "/animals-imgs/shrimp.svg"
       },
       {
-        "src": "/animals-imgs/cow.png",
-        "size": 12
+        "src": "/animals-imgs/cow.svg"
       },
       {
-        "src": "/animals-imgs/bull.png",
-        "size": 12
+        "src": "/animals-imgs/bull.svg"
       }
     ],
     "img": "/prenat.png",
@@ -629,8 +586,7 @@
     "listColor": "rgba(255, 136, 0, 0.4)",
     "availableImgs": [
       {
-        "src": "/animals-imgs/cow.png",
-        "size": 12
+        "src": "/animals-imgs/cow.svg"
       }
     ],
     "img": "/forlife.png",
@@ -670,16 +626,13 @@
     "listColor": "rgba(49, 110, 89, 0.6)",
     "availableImgs": [
       {
-        "src": "/animals-imgs/cow.png",
-        "size": 11
+        "src": "/animals-imgs/cow.svg"
       },
       {
-        "src": "/animals-imgs/sheep.png",
-        "size": 11
+        "src": "/animals-imgs/sheep.svg"
       },
       {
-        "src": "/animals-imgs/bull.png",
-        "size": 12
+        "src": "/animals-imgs/bull.svg"
       }
     ],
     "img": "/dermosan.png",
@@ -720,16 +673,13 @@
     "listColor": "rgba(149, 139, 168, 0.7)",
     "availableImgs": [
       {
-        "src": "/animals-imgs/cow.png",
-        "size": 11
+        "src": "/animals-imgs/cow.svg"
       },
       {
-        "src": "/animals-imgs/sheep.png",
-        "size": 11
+        "src": "/animals-imgs/sheep.svg"
       },
       {
-        "src": "/animals-imgs/bull.png",
-        "size": 12
+        "src": "/animals-imgs/bull.svg"
       }
     ],
     "img": "/mustgel.png",
@@ -769,16 +719,13 @@
     "listColor": "rgba(149, 130, 168, 0.6)",
     "availableImgs": [
       {
-        "src": "/animals-imgs/cow.png",
-        "size": 11
+        "src": "/animals-imgs/cow.svg"
       },
       {
-        "src": "/animals-imgs/sheep.png",
-        "size": 11
+        "src": "/animals-imgs/sheep.svg"
       },
       {
-        "src": "/animals-imgs/bull.png",
-        "size": 12
+        "src": "/animals-imgs/bull.svg"
       }
     ],
     "img": "/musttwo.png",

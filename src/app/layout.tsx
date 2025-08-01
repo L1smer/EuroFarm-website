@@ -1,5 +1,5 @@
 import "./globals.css";
-import { Manrope } from "next/font/google";
+import { manrope } from "@/app/lib/fonts";
 import Header from "./ui/Header";
 
 export default function RootLayout({
@@ -9,8 +9,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Header/>
-      <body>{children}</body>
+      <body className={`${manrope.className} antialiased`}>
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }

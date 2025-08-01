@@ -1,10 +1,16 @@
 export default function Home() {
   return (
-    <p className="text-8xl font-normal flex items-center">
-      Mix
-      <span className="border-green-500 w-25 h-25 border-[10px] rounded-full ml-2" />
-      il
-      <p className="flex self-start ml-2 text-4xl font-extrabold">++</p>
-    </p>
+    <div className="flex flex-col w-full gap-10 justify-center items-center mt-40 px-1 md:px-10">
+      <h1 className="font-extrabold text-3xl md:text-5xl max-w-200 text-center">Кормові добавки на основі селективних фітомолекул</h1>
+      <p className="max-w-200 text-xl md:text-3xl text-center">
+        ТОВ «Евро фарм» м.Житомир ексклюзивно представляє в Україні передові
+        кормові добавки та натуральні препарати від AWP SpA (Італія). Ці
+        інноваційні продукти, розроблені експертами в галузі натуральних рішень
+        для тваринництва, ґрунтуються на унікальній технології з'єднання
+        селективних фітомолекул, середньоланцюжкових жирних кислот та озону,
+        забезпечуючи високоефективні та безпечні рішення для покращення здоров'я
+        і продуктивності сільськогосподарських тварин.
+      </p>
+    </div>
   );
 }

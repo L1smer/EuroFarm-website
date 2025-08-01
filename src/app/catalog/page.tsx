@@ -75,6 +75,7 @@ const animalOptions: AnimalOption[] = [
 
 export default function Catalog() {
   const [selectedAnimals, setSelectedAnimals] = useState<AnimalOption[]>([]);
+  const allAnimals = animalOptions.map(o => o.value)
   const filterAnimals = selectedAnimals.map((o) => o.value);
   const handleAnimalChange = (opts: MultiValue<AnimalOption> | null) =>
     setSelectedAnimals(opts ? [...opts] : []);
@@ -91,7 +92,7 @@ export default function Catalog() {
   );
 
   return (
-    <div className="max-w-[1600px] flex flex-col my-40 p-10 mx-auto">
+    <div className="max-w-[1600px] flex flex-col p-10 mx-auto">
       <div className="flex w-full justify-end">
         <Select
           options={animalOptions}
@@ -108,13 +109,13 @@ export default function Catalog() {
         />
       </div>
 
-      <div className="flex flex-col gap-30 lg:gap-40">
+      <div className="flex flex-col mt-15 md:mt-0 gap-30 lg:gap-40">
         {filteredProducts.map((product, i) => (
           <Product
             key={i}
             productInfo={product}
             Logo={logoMap[product.logo]}
-            animals={filterAnimals}
+            animals={allAnimals}
           />
         ))}
       </div>

@@ -1,5 +1,5 @@
 import "../globals.css";
-import "../globals.css";
+import Header from "../ui/Header";
 import { manrope } from "@/app/lib/fonts"
 
 export default function RootLayout({

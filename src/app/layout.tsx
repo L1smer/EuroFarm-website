@@ -1,5 +1,6 @@
 import "./globals.css";
 import { Manrope } from "next/font/google";
+import Header from "./ui/Header";
 
 export default function RootLayout({
   children,
@@ -8,6 +9,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Header/>
       <body>{children}</body>
     </html>
   );

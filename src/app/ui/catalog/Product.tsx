@@ -13,7 +13,7 @@ export default function Product({
   animals: string[];
 }) {
   return (
-    <div className="flex flex-col gap-10 justify-center sm:px-4 py-2 sm:py-10 lg:py-20">
+    <div className="flex flex-col md:gap-10 justify-center sm:px-4 py-2 sm:py-10 lg:py-20">
       {/* Logo */}
       <div className="mb-6 lg:mb-8">{Logo}</div>
 

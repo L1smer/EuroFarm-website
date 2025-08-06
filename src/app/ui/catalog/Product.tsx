@@ -57,7 +57,7 @@ export default function Product({
                 : productInfo.availableIn.join()}
             </p>
             <div className="flex flex-wrap justify-center items-center gap-1">
-              {productInfo.availableImgs.map((img, i) => (
+              {productInfo.availableImgs.map((img:any, i:any) => (
                 <Image
                   key={i}
                   src={img.src}
@@ -75,7 +75,7 @@ export default function Product({
                 style={{ backgroundColor: productInfo.listColor }}
                 className="font-bold text-base sm:text-lg md:text-xl text-white flex flex-col items-start gap-3 p-4 rounded-lg"
               >
-                {productInfo.listItems.map((item, i) => (
+                {productInfo.listItems.map((item:any, i:any) => (
                   <li key={i} className="flex flex-row gap-2 items-center">
                     <Check
                       size={22}
@@ -202,7 +202,7 @@ function ProductInfoSection({
             {productInfo.mainText}
           </p>
           <ul className="font-bold text-base sm:text-xl md:text-2xl text-white flex flex-col justify-center gap-3 p-4 rounded-lg">
-            {productInfo.listItems.map((item, i) => (
+            {productInfo.listItems.map((item:any, i:any) => (
               <li key={i} className="flex flex-row gap-2 items-center">
                 <Check size={30} className="min-w-6 sm:min-w-8" color="white" />
                 <span>{item}</span>
@@ -224,7 +224,7 @@ function ProductInfoSection({
                 {productInfo.productListInfo.headingOfList}
               </h3>
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3 text-sm md:text-base break-words">
-                {productInfo.productListInfo.listComposition.map((item, i) => (
+                {productInfo.productListInfo.listComposition.map((item:any, i:any) => (
                   <li
                     key={i}
                     className="flex gap-2 items-start w-full max-w-full sm:max-w-sm"

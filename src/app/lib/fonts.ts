@@ -8,5 +8,5 @@ export const manrope = Manrope({
 
 export const libertinusMath = Libertinus_Math({
   subsets: ["latin"],
-  weight: ["400"],
+  weight: "400",
 });

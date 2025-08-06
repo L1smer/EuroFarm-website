@@ -72,7 +72,7 @@ const animalOptions: AnimalOption[] = [
   { value: "телята", label: "Телята" },
 ];
 
-export default function ProductList({ products }: {products: productInfoProps[]}) {
+export default function ProductList({ products }: {products: any}) {
   const [selectedAnimals, setSelectedAnimals] = useState<AnimalOption[]>([]);
   const allAnimals = animalOptions.map((o) => o.value);
   const filterAnimals = selectedAnimals.map((o) => o.value);

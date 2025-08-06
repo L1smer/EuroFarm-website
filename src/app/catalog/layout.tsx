@@ -1,4 +1,5 @@
 import "../globals.css";
+import "../print.css"
 import Header from "../ui/Header";
 import { manrope } from "@/app/lib/fonts"
 

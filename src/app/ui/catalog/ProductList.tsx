@@ -107,7 +107,7 @@ export default function ProductList({ products }: {products: productInfoProps[]}
         />
       </div>
 
-      <div className="flex flex-col mt-15 md:mt-0 ">
+      <div className="flex flex-col mt-15 md:mt-0 gap-30 lg:gap-40">
         {filteredProducts.map((product, i) => (
           <Product
             key={i}

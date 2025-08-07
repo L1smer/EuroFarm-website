@@ -2,7 +2,8 @@
 
 import Product from "@/app/ui/catalog/Product";
 import Select, { MultiValue } from "react-select";
-import { JSX, useState, useRef } from "react";
+import { JSX, useState } from "react";
+import type { ProductInfo } from "@/app/lib/types/productTypes";
 
 import MixOil from "@/app/catalog/logos/MixOil";
 import MixOilPlus from "@/app/catalog/logos/MixOilPlus";
@@ -18,30 +19,6 @@ import ForLife from "@/app/catalog/logos/ForLife";
 import Dermosan from "@/app/catalog/logos/Dermosan";
 import MustGel from "@/app/catalog/logos/MustGel";
 import MustTwo from "@/app/catalog/logos/MustTwo";
-
-export type productInfoProps = {
-  highlightText: string;
-  mainText: string;
-  logo: string;
-  listItems: string[];
-  listColor: string;
-  availableImgs: {
-    src: string;
-  }[];
-  img: string;
-  availableIn: string[];
-  productText: string;
-  dosageInfo: {
-    availability: string;
-    products: {
-      form?: string;
-      productInfo: {
-        species: string;
-        value: string;
-      }[];
-    }[];
-  };
-};
 
 type AnimalOption = { value: string; label: string };
 
@@ -79,8 +56,8 @@ export default function ProductList({ products }: {products: any}) {
   const handleAnimalChange = (opts: MultiValue<AnimalOption> | null) =>
     setSelectedAnimals(opts ? [...opts] : []);
 
-  const filteredProducts: productInfoProps[] = products.filter(
-    (product: productInfoProps) => {
+  const filteredProducts: ProductInfo[] = products.filter(
+    (product: ProductInfo) => {
       if (filterAnimals.length === 0) {
         return true;
       }

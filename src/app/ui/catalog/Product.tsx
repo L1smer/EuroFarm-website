@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Check } from "lucide-react";
-import type { productInfoProps } from "@/app/ui/catalog/ProductList";
+import type { ProductInfo, DosageInfo, InfoSection } from "@/app/lib/types/productTypes";
 import { JSX } from "react";
 import { libertinusMath } from "@/app/lib/fonts";
 
@@ -9,10 +9,12 @@ export default function Product({
   Logo,
   animals,
 }: {
-  productInfo: any;
+  productInfo: ProductInfo;
   Logo: JSX.Element;
   animals: string[];
 }) {
+  const isSimpleProduct = !productInfo.infoSection.containsText?.length;
+
   return (
     <div className="container mx-auto overflow-x-hidden px-4 py-8 md:py-16 flex flex-col">
       {/* Logo */}
@@ -32,23 +34,21 @@ export default function Product({
         </div>
       </div>
 
-      {/* Main Text if no infoSection */}
-
-      {!productInfo.infoSection && (
+      {/* Main Text for simple product */}
+      {isSimpleProduct && (
         <p className="text-lg sm:text-xl md:text-2xl text-center font-light mt-6">
-          {productInfo.mainText}
+          {productInfo.infoSection.mainText}
         </p>
       )}
 
       {/* Info Section */}
       <div
         className={`flex flex-col py-8 ${
-          !productInfo.infoSection &&
-          "lg:flex-row justify-center items-center mt-0"
+          isSimpleProduct && "lg:flex-row justify-center items-center mt-0"
         } w-full`}
       >
         {/* Left Side */}
-        <div className="flex flex-col items-center text-center gap-8 w-full ">
+        <div className="flex flex-col items-center text-center gap-8 w-full">
           <div>
             <p className="text-base sm:text-lg">{productInfo.productText}</p>
             <p className="font-extrabold text-lg sm:text-xl md:text-2xl 2xl:text-3xl uppercase text-[#e72e4d]">
@@ -57,7 +57,7 @@ export default function Product({
                 : productInfo.availableIn.join()}
             </p>
             <div className="flex flex-wrap justify-center items-center gap-1">
-              {productInfo.availableImgs.map((img:any, i:any) => (
+              {productInfo.availableImgs.map((img, i) => (
                 <Image
                   key={i}
                   src={img.src}
@@ -69,13 +69,14 @@ export default function Product({
               ))}
             </div>
           </div>
-          {!productInfo.infoSection && (
+
+          {isSimpleProduct && (
             <div className="bg-[url('/bg-list.png')] bg-center bg-cover rounded-lg">
               <ul
-                style={{ backgroundColor: productInfo.listColor }}
+                style={{ backgroundColor: productInfo.infoSection.bgColor }}
                 className="font-bold text-base sm:text-lg md:text-xl text-white flex flex-col items-start gap-3 p-4 rounded-lg"
               >
-                {productInfo.listItems.map((item:any, i:any) => (
+                {productInfo.infoSection.listItems.map((item, i) => (
                   <li key={i} className="flex flex-row gap-2 items-center">
                     <Check
                       size={22}
@@ -90,7 +91,6 @@ export default function Product({
           )}
         </div>
 
-        {/* Right Side */}
         <div className="flex items-center justify-center w-full">
           <Image
             src={productInfo.img}
@@ -102,10 +102,9 @@ export default function Product({
         </div>
       </div>
 
-      {/* Conditional Info Section */}
-      {productInfo.infoSection ? (
+      {!isSimpleProduct ? (
         <ProductInfoSection
-          productInfo={productInfo.infoSection}
+          infoSection={productInfo.infoSection}
           children={<Info dosageInfo={productInfo.dosageInfo} />}
         />
       ) : (
@@ -115,18 +114,7 @@ export default function Product({
   );
 }
 
-type dosageInfo = {
-  availability: string;
-  products: {
-    form?: string;
-    productInfo: {
-      species: string;
-      value: string;
-    }[];
-  }[];
-};
-
-function Info({ dosageInfo }: { dosageInfo: dosageInfo }) {
+function Info({ dosageInfo }: { dosageInfo: DosageInfo }) {
   // знаходимо максимальну кількість рядків у всіх колонках
   const maxRows = Math.max(
     ...dosageInfo.products.map((p) => p.productInfo.length)
@@ -134,7 +122,6 @@ function Info({ dosageInfo }: { dosageInfo: dosageInfo }) {
 
   return (
     <div className="flex flex-col lg:flex-row w-full text-white overflow-hidden">
-      {/* Ліва частина — назва форм */}
       <div className="flex flex-col justify-center items-center bg-[#a4cf73] w-full lg:w-1/4 p-4 text-center">
         <p className="text-base sm:text-lg">Доступний у вигляді</p>
         <p className="text-lg sm:text-xl font-bold uppercase">
@@ -142,11 +129,9 @@ function Info({ dosageInfo }: { dosageInfo: dosageInfo }) {
         </p>
       </div>
 
-      {/* Права частина — таблиця дозування */}
-      <div className="flex flex-col lg:flex-row flex-grow w-full">
+      <div className="flex flex-col sm:flex-row flex-grow w-full">
         {dosageInfo.products.map((product, index) => (
           <div className="flex flex-col w-full" key={index}>
-            {/* Заголовок */}
             {product.form && (
               <div className="bg-[#8ec384] flex flex-col items-center justify-center h-[80px] sm:h-[100px] text-center px-2">
                 <p className="text-sm">Дозування</p>
@@ -154,15 +139,14 @@ function Info({ dosageInfo }: { dosageInfo: dosageInfo }) {
               </div>
             )}
 
-            {/* Рядки таблиці */}
             {Array.from({ length: maxRows }).map((_, i) => {
               const item = product.productInfo[i];
               return (
                 <div
                   key={i}
-                  className={`flex flex-col items-center justify-center p-4 sm:p-5 min-h-[100px] ${
+                  className={`flex flex-col p-4 sm:p-5 min-h-[100px] ${
                     i % 2 === 0 ? "bg-[#f0f0f0]" : "bg-[#e0e0e0]"
-                  } text-[#57aa43] text-center`}
+                  } ${!item && "hidden sm:flex"} justify-center items-center text-[#57aa43]`}
                 >
                   {item ? (
                     <>
@@ -172,7 +156,7 @@ function Info({ dosageInfo }: { dosageInfo: dosageInfo }) {
                       </p>
                     </>
                   ) : (
-                    <div className="h-[1em]">&nbsp;</div> // Порожній блок
+                    <div className="h-[1em]">&nbsp;</div>
                   )}
                 </div>
               );
@@ -185,24 +169,24 @@ function Info({ dosageInfo }: { dosageInfo: dosageInfo }) {
 }
 
 function ProductInfoSection({
-  productInfo,
+  infoSection,
   children,
 }: {
-  productInfo: any;
+  infoSection: InfoSection;
   children: React.ReactNode;
 }) {
   return (
     <div className="w-full rounded-xl overflow-hidden bg-[url('/bg-list.png')] bg-cover text-white shadow-lg">
       <div
-        style={{ backgroundColor: productInfo.bgColor }}
+        style={{ backgroundColor: infoSection.bgColor }}
         className="flex flex-col lg:flex-row gap-8 p-4 md:p-8"
       >
         <div className="flex flex-col justify-between gap-6 w-full lg:w-1/2">
           <p className="font-medium text-lg sm:text-xl md:text-2xl">
-            {productInfo.mainText}
+            {infoSection.mainText}
           </p>
-          <ul className="font-bold text-base sm:text-xl md:text-2xl text-white flex flex-col justify-center gap-3 p-4 rounded-lg">
-            {productInfo.listItems.map((item:any, i:any) => (
+          <ul className="font-bold text-[18px] sm:text-xl md:text-2xl text-white flex flex-col justify-center gap-3 sm:p-4 rounded-lg">
+            {infoSection.listItems.map((item: any, i: any) => (
               <li key={i} className="flex flex-row gap-2 items-center">
                 <Check size={30} className="min-w-6 sm:min-w-8" color="white" />
                 <span>{item}</span>
@@ -213,25 +197,27 @@ function ProductInfoSection({
 
         <div className="flex-1 flex flex-col justify-center gap-2 bg-white text-[#2c2c2c] p-6 rounded-xl shadow-md">
           <p className="text-base md:text-lg text-center font-semibold">
-            {productInfo.containsText}
+            {infoSection.containsText}
           </p>
-          {productInfo.productListInfo.listComposition?.length > 0 && (
+          {infoSection.productListInfo!.listComposition?.length > 0 && (
             <div>
               <h3
-                style={{ color: productInfo.bgColor }}
+                style={{ color: infoSection.bgColor }}
                 className="text-lg border-t border-black pt-3 md:text-xl font-bold mb-4 text-center"
               >
-                {productInfo.productListInfo.headingOfList}
+                {infoSection.productListInfo!.headingOfList}
               </h3>
-              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3 text-sm md:text-base break-words">
-                {productInfo.productListInfo.listComposition.map((item:any, i:any) => (
-                  <li
-                    key={i}
-                    className="flex gap-2 items-start w-full max-w-full sm:max-w-sm"
-                  >
-                    <span className="font-semibold text-[#333]">{item}</span>
-                  </li>
-                ))}
+              <ul className="grid grid-cols-1 sm:grid-cols-2 place-items-center gap-x-6 gap-y-3 text-sm md:text-base break-words">
+                {infoSection.productListInfo!.listComposition.map(
+                  (item: any, i: any) => (
+                    <li
+                      key={i}
+                      className="flex items-center justify-center text-center w-full max-w-full sm:max-w-sm"
+                    >
+                      <span className="font-semibold text-[#333]">{item}</span>
+                    </li>
+                  )
+                )}
               </ul>
             </div>
           )}

@@ -1,8 +1,8 @@
 import Image from "next/image";
 import { Check } from "lucide-react";
-import type { ProductInfo, DosageInfo, InfoSection } from "@/app/lib/types/productTypes";
+import type { ProductInfo, DosageInfo, InfoSection } from "@/app/awp/lib/types/productTypes";
 import { JSX } from "react";
-import { libertinusMath } from "@/app/lib/fonts";
+import { libertinusMath } from "@/app/awp/lib/fonts";
 
 export default function Product({
   productInfo,

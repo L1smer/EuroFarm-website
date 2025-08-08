@@ -5,8 +5,8 @@ import { usePathname } from "next/navigation";
 import clsx from "clsx";
 
 const links: { name: string; href: string }[] = [
-  { name: "Головна", href: "/" },
-  { name: "Каталог", href: "/catalog" },
+  { name: "Головна", href: "/awp" },
+  { name: "Каталог", href: "/awp/catalog" },
 ];
 
 export default function Header() {

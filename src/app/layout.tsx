@@ -1,6 +1,4 @@
 import "./globals.css";
-import { manrope } from "@/app/lib/fonts";
-import Header from "./ui/Header";
 
 export default function RootLayout({
   children,
@@ -9,8 +7,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${manrope.className} antialiased`}>
-        <Header />
+      <body className={``}>
         {children}
       </body>
     </html>

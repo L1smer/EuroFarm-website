@@ -1,24 +1,24 @@
 "use client";
 
-import Product from "@/app/ui/catalog/Product";
+import Product from "@/app/awp/ui/catalog/Product";
 import Select, { MultiValue } from "react-select";
 import { JSX, useState } from "react";
-import type { ProductInfo } from "@/app/lib/types/productTypes";
+import type { ProductInfo } from "@/app/awp/lib/types/productTypes";
 
-import MixOil from "@/app/catalog/logos/MixOil";
-import MixOilPlus from "@/app/catalog/logos/MixOilPlus";
-import MixOilPlusAqua from "@/app/catalog/logos/MixOilPlusAqua";
-import AirOil from "@/app/catalog/logos/AirOil";
-import CoxxOil from "@/app/catalog/logos/CoxxOil";
-import ImmunOil from "@/app/catalog/logos/ImmunOil";
-import FourPowerX from "@/app/catalog/logos/FourPowerX";
-import Wlf from "@/app/catalog/logos/Wlf";
-import Toxinfibre from "@/app/catalog/logos/Toxinfibre";
-import PreNat from "@/app/catalog/logos/PreNat";
-import ForLife from "@/app/catalog/logos/ForLife";
-import Dermosan from "@/app/catalog/logos/Dermosan";
-import MustGel from "@/app/catalog/logos/MustGel";
-import MustTwo from "@/app/catalog/logos/MustTwo";
+import MixOil from "@/app/awp/logos/MixOil";
+import MixOilPlus from "@/app/awp/logos/MixOilPlus";
+import MixOilPlusAqua from "@/app/awp/logos/MixOilPlusAqua";
+import AirOil from "@/app/awp/logos/AirOil";
+import CoxxOil from "@/app/awp/logos/CoxxOil";
+import ImmunOil from "@/app/awp/logos/ImmunOil";
+import FourPowerX from "@/app/awp/logos/FourPowerX";
+import Wlf from "@/app/awp/logos/Wlf";
+import Toxinfibre from "@/app/awp/logos/Toxinfibre";
+import PreNat from "@/app/awp/logos/PreNat";
+import ForLife from "@/app/awp/logos/ForLife";
+import Dermosan from "@/app/awp/logos/Dermosan";
+import MustGel from "@/app/awp/logos/MustGel";
+import MustTwo from "@/app/awp/logos/MustTwo";
 
 type AnimalOption = { value: string; label: string };
 

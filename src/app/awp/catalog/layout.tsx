@@ -1,7 +1,6 @@
-import "../globals.css";
-import "../print.css"
+import "@/app/globals.css";
 import Header from "../ui/Header";
-import { manrope } from "@/app/lib/fonts"
+import { manrope } from "@/app/awp/lib/fonts"
 
 export default function RootLayout({
   children,

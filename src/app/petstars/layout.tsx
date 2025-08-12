@@ -1,6 +1,4 @@
 import "@/app/globals.css";
-import Header from "../ui/Header";
-import { manrope } from "@/app/awp/lib/fonts"
 
 export default function RootLayout({
   children,
@@ -9,7 +7,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${manrope.className} antialiased`}>{children}</body>
+      <body>
+        {children}
+      </body>
     </html>
   );
 }

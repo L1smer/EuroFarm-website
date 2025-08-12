@@ -181,7 +181,7 @@ function ProductInfoSection({
         style={{ backgroundColor: infoSection.bgColor }}
         className="flex flex-col lg:flex-row gap-8 p-4 md:p-8"
       >
-        <div className="flex flex-col justify-between gap-6 w-full lg:w-1/2">
+        <div className="flex flex-col justify-center gap-6 w-full lg:w-1/2">
           <p className="font-medium text-lg sm:text-xl md:text-2xl">
             {infoSection.mainText}
           </p>

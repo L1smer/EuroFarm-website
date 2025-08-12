@@ -1,5 +1,5 @@
-import "./globals.css";
-import { cuprum } from "./lib/fonts";
+import "../globals.css";
+import { cuprum } from "../lib/fonts";
 
 export default function RootLayout({
   children,

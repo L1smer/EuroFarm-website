@@ -1,4 +1,5 @@
 import "./globals.css";
+import { cuprum } from "./lib/fonts";
 
 export default function RootLayout({
   children,
@@ -7,9 +8,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={``}>
-        {children}
-      </body>
+      <body className={`${cuprum.className} antialiased`}>{children}</body>
     </html>
   );
 }

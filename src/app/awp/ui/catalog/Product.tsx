@@ -21,7 +21,7 @@ export default function Product({
       <div className="flex justify-center mb-10">{Logo}</div>
 
       {/* Highlight Section */}
-      <div className="overflow-hidden bg-[url('/bg-list.png')] bg-cover border border-[#a4cf73] rounded-xl shadow-md backdrop-blur-sm">
+      <div className="overflow-hidden bg-[url('/awp/bg-list.png')] bg-cover border border-[#a4cf73] rounded-xl shadow-md backdrop-blur-sm">
         <div
           style={{
             backgroundImage: `linear-gradient(to right, ${productInfo.highlightTextColor}, transparent)`,
@@ -71,7 +71,7 @@ export default function Product({
           </div>
 
           {isSimpleProduct && (
-            <div className="bg-[url('/bg-list.png')] bg-center bg-cover rounded-lg">
+            <div className="bg-[url('/awp/bg-list.png')] bg-center bg-cover rounded-lg">
               <ul
                 style={{ backgroundColor: productInfo.infoSection.bgColor }}
                 className="font-bold text-base sm:text-lg md:text-xl text-white flex flex-col items-start gap-3 p-4 rounded-lg"
@@ -176,7 +176,7 @@ function ProductInfoSection({
   children: React.ReactNode;
 }) {
   return (
-    <div className="w-full rounded-xl overflow-hidden bg-[url('/bg-list.png')] bg-cover text-white shadow-lg">
+    <div className="w-full rounded-xl overflow-hidden bg-[url('/awp/bg-list.png')] bg-cover text-white shadow-lg">
       <div
         style={{ backgroundColor: infoSection.bgColor }}
         className="flex flex-col lg:flex-row gap-8 p-4 md:p-8"

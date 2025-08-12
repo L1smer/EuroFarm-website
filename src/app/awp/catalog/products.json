@@ -26,22 +26,22 @@
     },
     "availableImgs": [
       {
-        "src": "/animals-imgs/chicken.svg"
+        "src": "/awp/animals-imgs/chicken.svg"
       },
       {
-        "src": "/animals-imgs/pig.svg"
+        "src": "/awp/animals-imgs/pig.svg"
       },
       {
-        "src": "/animals-imgs/bull.svg"
+        "src": "/awp/animals-imgs/bull.svg"
       },
       {
-        "src": "/animals-imgs/cow.svg"
+        "src": "/awp/animals-imgs/cow.svg"
       },
       {
-        "src": "/animals-imgs/sheep.svg"
+        "src": "/awp/animals-imgs/sheep.svg"
       }
     ],
-    "img": "/mixoil.png",
+    "img": "/awp/mixoil.png",
     "availableIn": [
       "птахи",
       "свині",
@@ -97,22 +97,22 @@
     },
     "availableImgs": [
       {
-        "src": "/animals-imgs/chicken.svg"
+        "src": "/awp/animals-imgs/chicken.svg"
       },
       {
-        "src": "/animals-imgs/pig.svg"
+        "src": "/awp/animals-imgs/pig.svg"
       },
       {
-        "src": "/animals-imgs/bull.svg"
+        "src": "/awp/animals-imgs/bull.svg"
       },
       {
-        "src": "/animals-imgs/cow.svg"
+        "src": "/awp/animals-imgs/cow.svg"
       },
       {
-        "src": "/animals-imgs/sheep.svg"
+        "src": "/awp/animals-imgs/sheep.svg"
       }
     ],
-    "img": "/mixoil.png",
+    "img": "/awp/mixoil.png",
     "availableIn": [
       "птахи",
       "свині",
@@ -174,13 +174,13 @@
     },
     "availableImgs": [
       {
-        "src": "/animals-imgs/fish.svg"
+        "src": "/awp/animals-imgs/fish.svg"
       },
       {
-        "src": "/animals-imgs/shrimp.svg"
+        "src": "/awp/animals-imgs/shrimp.svg"
       }
     ],
-    "img": "/mixoilplusaqua.png",
+    "img": "/awp/mixoilplusaqua.png",
     "availableIn": [
       "риба",
       "креветки"
@@ -229,16 +229,16 @@
     },
     "availableImgs": [
       {
-        "src": "/animals-imgs/chicken.svg"
+        "src": "/awp/animals-imgs/chicken.svg"
       },
       {
-        "src": "/animals-imgs/pig.svg"
+        "src": "/awp/animals-imgs/pig.svg"
       },
       {
-        "src": "/animals-imgs/cow.svg"
+        "src": "/awp/animals-imgs/cow.svg"
       }
     ],
-    "img": "/airoil.png",
+    "img": "/awp/airoil.png",
     "availableIn": [
       "птахи",
       "свині",
@@ -312,10 +312,10 @@
     },
     "availableImgs": [
       {
-        "src": "/animals-imgs/chicken.svg"
+        "src": "/awp/animals-imgs/chicken.svg"
       }
     ],
-    "img": "/coxxoil.png",
+    "img": "/awp/coxxoil.png",
     "availableIn": [
       "птахи"
     ],
@@ -359,13 +359,13 @@
     },
     "availableImgs": [
       {
-        "src": "/animals-imgs/chicken.svg"
+        "src": "/awp/animals-imgs/chicken.svg"
       },
       {
-        "src": "/animals-imgs/pig.svg"
+        "src": "/awp/animals-imgs/pig.svg"
       }
     ],
-    "img": "/immunoil.png",
+    "img": "/awp/immunoil.png",
     "availableIn": [
       "птахи",
       "свині"
@@ -403,25 +403,25 @@
     },
     "availableImgs": [
       {
-        "src": "/animals-imgs/chicken.svg"
+        "src": "/awp/animals-imgs/chicken.svg"
       },
       {
-        "src": "/animals-imgs/pig.svg"
+        "src": "/awp/animals-imgs/pig.svg"
       },
       {
-        "src": "/animals-imgs/cow.svg"
+        "src": "/awp/animals-imgs/cow.svg"
       },
       {
-        "src": "/animals-imgs/sheep.svg"
+        "src": "/awp/animals-imgs/sheep.svg"
       },
       {
-        "src": "/animals-imgs/bull.svg"
+        "src": "/awp/animals-imgs/bull.svg"
       },
       {
-        "src": "/animals-imgs/fish.svg"
+        "src": "/awp/animals-imgs/fish.svg"
       }
     ],
-    "img": "/4powerX.png",
+    "img": "/awp/4powerX.png",
     "availableIn": [
       "птахи",
       "свині",
@@ -476,13 +476,13 @@
     },
     "availableImgs": [
       {
-        "src": "/animals-imgs/chicken.svg"
+        "src": "/awp/animals-imgs/chicken.svg"
       },
       {
-        "src": "/animals-imgs/pig.svg"
+        "src": "/awp/animals-imgs/pig.svg"
       }
     ],
-    "img": "/wlf.png",
+    "img": "/awp/wlf.png",
     "availableIn": [
       "птахи",
       "свині"
@@ -522,28 +522,28 @@
     },
     "availableImgs": [
       {
-        "src": "/animals-imgs/chicken.svg"
+        "src": "/awp/animals-imgs/chicken.svg"
       },
       {
-        "src": "/animals-imgs/pig.svg"
+        "src": "/awp/animals-imgs/pig.svg"
       },
       {
-        "src": "/animals-imgs/fish.svg"
+        "src": "/awp/animals-imgs/fish.svg"
       },
       {
-        "src": "/animals-imgs/sheep.svg"
+        "src": "/awp/animals-imgs/sheep.svg"
       },
       {
-        "src": "/animals-imgs/horse.svg"
+        "src": "/awp/animals-imgs/horse.svg"
       },
       {
-        "src": "/animals-imgs/cow.svg"
+        "src": "/awp/animals-imgs/cow.svg"
       },
       {
-        "src": "/animals-imgs/bull.svg"
+        "src": "/awp/animals-imgs/bull.svg"
       }
     ],
-    "img": "/toxinfibre.png",
+    "img": "/awp/toxinfibre.png",
     "availableIn": [
       "птахи",
       "свині",
@@ -589,31 +589,31 @@
     },
     "availableImgs": [
       {
-        "src": "/animals-imgs/chicken.svg"
+        "src": "/awp/animals-imgs/chicken.svg"
       },
       {
-        "src": "/animals-imgs/pig.svg"
+        "src": "/awp/animals-imgs/pig.svg"
       },
       {
-        "src": "/animals-imgs/fish.svg"
+        "src": "/awp/animals-imgs/fish.svg"
       },
       {
-        "src": "/animals-imgs/sheep.svg"
+        "src": "/awp/animals-imgs/sheep.svg"
       },
       {
-        "src": "/animals-imgs/horse.svg"
+        "src": "/awp/animals-imgs/horse.svg"
       },
       {
-        "src": "/animals-imgs/shrimp.svg"
+        "src": "/awp/animals-imgs/shrimp.svg"
       },
       {
-        "src": "/animals-imgs/cow.svg"
+        "src": "/awp/animals-imgs/cow.svg"
       },
       {
-        "src": "/animals-imgs/bull.svg"
+        "src": "/awp/animals-imgs/bull.svg"
       }
     ],
-    "img": "/prenat.png",
+    "img": "/awp/prenat.png",
     "availableIn": [
       "птахи",
       "свині",
@@ -667,10 +667,10 @@
     },
     "availableImgs": [
       {
-        "src": "/animals-imgs/cow.svg"
+        "src": "/awp/animals-imgs/cow.svg"
       }
     ],
-    "img": "/forlife.png",
+    "img": "/awp/forlife.png",
     "availableIn": [
       "телята"
     ],
@@ -731,16 +731,16 @@
     },
     "availableImgs": [
       {
-        "src": "/animals-imgs/cow.svg"
+        "src": "/awp/animals-imgs/cow.svg"
       },
       {
-        "src": "/animals-imgs/sheep.svg"
+        "src": "/awp/animals-imgs/sheep.svg"
       },
       {
-        "src": "/animals-imgs/bull.svg"
+        "src": "/awp/animals-imgs/bull.svg"
       }
     ],
-    "img": "/dermosan.png",
+    "img": "/awp/dermosan.png",
     "availableIn": [
       "жуйні тварини"
     ],
@@ -782,16 +782,16 @@
     },
     "availableImgs": [
       {
-        "src": "/animals-imgs/cow.svg"
+        "src": "/awp/animals-imgs/cow.svg"
       },
       {
-        "src": "/animals-imgs/sheep.svg"
+        "src": "/awp/animals-imgs/sheep.svg"
       },
       {
-        "src": "/animals-imgs/bull.svg"
+        "src": "/awp/animals-imgs/bull.svg"
       }
     ],
-    "img": "/mustgel.png",
+    "img": "/awp/mustgel.png",
     "availableIn": [
       "жуйні тварини"
     ],
@@ -832,16 +832,16 @@
     },
     "availableImgs": [
       {
-        "src": "/animals-imgs/cow.svg"
+        "src": "/awp/animals-imgs/cow.svg"
       },
       {
-        "src": "/animals-imgs/sheep.svg"
+        "src": "/awp/animals-imgs/sheep.svg"
       },
       {
-        "src": "/animals-imgs/bull.svg"
+        "src": "/awp/animals-imgs/bull.svg"
       }
     ],
-    "img": "/musttwo.png",
+    "img": "/awp/musttwo.png",
     "availableIn": [
       "жуйні тварини"
     ],

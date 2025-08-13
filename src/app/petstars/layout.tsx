@@ -1,4 +1,4 @@
-import "@/app/globals.css";
+import "@/app/petstars.css";
 
 export default function RootLayout({
   children,

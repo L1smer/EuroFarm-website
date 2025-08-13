@@ -1,4 +1,4 @@
-import "../globals.css";
+import "../awp.css";
 import { cuprum } from "../lib/fonts";
 
 export default function RootLayout({

@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #111111;
+  --color-secondary: #F0F2F4;
+  --color-text: #333333;
+  --color-accent: #7CB41C
+}
+
+
+@layer utilities {
+  .shadow-text {
+    text-shadow: 3px 2px 2px rgba(0, 0, 0, 0.25);
+  }
+}
+

@@ -1,4 +1,4 @@
-import "@/app/globals.css";
+import "@/app/awp.css";
 import { manrope } from "@/app/awp/lib/fonts";
 import Header from "./ui/Header";
 

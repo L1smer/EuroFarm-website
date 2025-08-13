@@ -2,7 +2,7 @@ import Image from "next/image";
 import { Check } from "lucide-react";
 import type { ProductInfo, DosageInfo, InfoSection } from "@/app/awp/lib/types/productTypes";
 import { JSX } from "react";
-import { libertinusMath } from "@/app/awp/lib/fonts";
+import { sora } from "@/app/awp/lib/fonts";
 
 export default function Product({
   productInfo,
@@ -21,14 +21,14 @@ export default function Product({
       <div className="flex justify-center mb-10">{Logo}</div>
 
       {/* Highlight Section */}
-      <div className="overflow-hidden bg-[url('/awp/bg-list.png')] bg-cover border border-[#a4cf73] rounded-xl shadow-md backdrop-blur-sm">
+      <div className="overflow-hidden bg-[url('/awp/bg-list.png')] bg-cover border border-accent rounded-xl shadow-md backdrop-blur-sm">
         <div
           style={{
             backgroundImage: `linear-gradient(to right, ${productInfo.highlightTextColor}, transparent)`,
           }}
           className="text-white flex justify-center items-center text-center font-normal w-full h-full p-4 text-2xl sm:text-3xl lg:text-4xl"
         >
-          <p className={`${libertinusMath.className} antialiased`}>
+          <p className={`${sora.className} antialiased`}>
             {productInfo.highlightText}
           </p>
         </div>

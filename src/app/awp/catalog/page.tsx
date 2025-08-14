@@ -1,4 +1,5 @@
 import { getProducts } from "../lib/getProducts";
+import MainSection from "../ui/catalog/MainSection";
 import ProductList from "../ui/catalog/ProductList";
 
 export default async function Catalog() {
@@ -6,6 +7,7 @@ export default async function Catalog() {
 
   return (
     <>
+      <MainSection />
       <ProductList products={products} />
     </>
   );

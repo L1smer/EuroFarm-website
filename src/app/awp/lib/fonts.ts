@@ -8,5 +8,5 @@ export const manrope = Manrope({
 
 export const sora = Sora({
   subsets: ["latin"],
-  weight: "400",
+  weight: ["400", "800"],
 });

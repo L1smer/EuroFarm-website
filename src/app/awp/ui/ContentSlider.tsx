@@ -131,7 +131,7 @@ export default function ContentSlider({
       role="region"
       aria-roledescription="carousel"
       aria-label="Content slider"
-      className={`relative w-[95%] mx-auto overflow-hidden ${className}`}
+      className={`relative mx-auto overflow-hidden ${className}`}
       onTouchStart={onTouchStart}
       onTouchMove={onTouchMove}
       onTouchEnd={onTouchEnd}
@@ -174,7 +174,7 @@ export default function ContentSlider({
                     aria-hidden="true"
                     className="absolute inset-0 w-full h-full object-cover"
                   />
-                  <div className="absolute inset-0 bg-black/30"/>
+                  <div className="absolute inset-0 bg-black/30" />
                 </>
               )}
 

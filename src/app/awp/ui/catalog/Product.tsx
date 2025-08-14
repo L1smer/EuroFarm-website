@@ -16,7 +16,7 @@ export default function Product({
   const isSimpleProduct = !productInfo.infoSection.containsText?.length;
 
   return (
-    <div className="container mx-auto overflow-x-hidden px-4 py-8 md:py-16 flex flex-col">
+    <article className="container mx-auto overflow-x-hidden px-4 py-8 md:py-16 flex flex-col">
       {/* Logo */}
       <div className="flex justify-center mb-10">{Logo}</div>
 
@@ -110,12 +110,11 @@ export default function Product({
       ) : (
         <Info dosageInfo={productInfo.dosageInfo} />
       )}
-    </div>
+    </article>
   );
 }
 
 function Info({ dosageInfo }: { dosageInfo: DosageInfo }) {
-  // знаходимо максимальну кількість рядків у всіх колонках
   const maxRows = Math.max(
     ...dosageInfo.products.map((p) => p.productInfo.length)
   );
@@ -151,7 +150,7 @@ function Info({ dosageInfo }: { dosageInfo: DosageInfo }) {
                   {item ? (
                     <>
                       <p className="font-bold text-sm">{item.species}</p>
-                      <p className="text-sm max-w-full break-words whitespace-normal">
+                      <p className="text-sm max-w-full text-center break-words whitespace-normal">
                         {item.value}
                       </p>
                     </>

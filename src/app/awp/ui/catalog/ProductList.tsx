@@ -49,7 +49,7 @@ const animalOptions: AnimalOption[] = [
   { value: "телята", label: "Телята" },
 ];
 
-export default function ProductList({ products }: {products: any}) {
+export default function ProductList({ products }: { products: any }) {
   const [selectedAnimals, setSelectedAnimals] = useState<AnimalOption[]>([]);
   const allAnimals = animalOptions.map((o) => o.value);
   const filterAnimals = selectedAnimals.map((o) => o.value);
@@ -67,33 +67,35 @@ export default function ProductList({ products }: {products: any}) {
     }
   );
   return (
-    <div className="max-w-[1600px] flex flex-col px-2 sm:p-10 mx-auto">
-      <div className="flex w-full justify-end">
-        <Select
-          options={animalOptions}
-          isMulti
-          closeMenuOnSelect={false}
-          placeholder="Фільтр по тваринам..."
-          value={selectedAnimals}
-          onChange={handleAnimalChange}
-          className="w-full sm:max-w-sm"
-          styles={{
-            control: (base) => ({ ...base, borderRadius: 8 }),
-            menu: (base) => ({ ...base, zIndex: 30 }),
-          }}
-        />
-      </div>
-
-      <div className="flex flex-col mt-15 md:mt-0 gap-30 lg:gap-40">
-        {filteredProducts.map((product, i) => (
-          <Product
-            key={i}
-            productInfo={product}
-            Logo={logoMap[product.logo]}
-            animals={allAnimals}
+    <section className="w-full bg-white">
+      <div className="max-w-[1600px] flex flex-col px-2 sm:p-10 mx-auto">
+        <div className="flex w-full justify-end">
+          <Select
+            options={animalOptions}
+            isMulti
+            closeMenuOnSelect={false}
+            placeholder="Фільтр по тваринам..."
+            value={selectedAnimals}
+            onChange={handleAnimalChange}
+            className="w-full sm:max-w-sm"
+            styles={{
+              control: (base) => ({ ...base, borderRadius: 8 }),
+              menu: (base) => ({ ...base, zIndex: 30 }),
+            }}
           />
-        ))}
+        </div>
+
+        <div className="flex flex-col mt-15 md:mt-0 gap-30 lg:gap-40">
+          {filteredProducts.map((product, i) => (
+            <Product
+              key={i}
+              productInfo={product}
+              Logo={logoMap[product.logo]}
+              animals={allAnimals}
+            />
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 }

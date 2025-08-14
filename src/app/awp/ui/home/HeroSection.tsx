@@ -19,6 +19,6 @@ const demoSlides: Slide[] = [
 
 export default function HeroSection() {
   return (
-    <ContentSlider slides={demoSlides} interval={12000} className="rounded-2xl"/>
+    <ContentSlider slides={demoSlides} interval={12000} className="w-[95%] rounded-2xl"/>
   );
 }

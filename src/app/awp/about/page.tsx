@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function AboutPage() {
   return (
     <section className="bg-secondary w-full py-20 ">
-      <div className="flex max-w-[1600px] justify-center items-start gap-20 min-h-screen mx-auto ">
+      <div className="flex flex-col lg:flex-row max-w-[1600px] justify-center items-start gap-20 p-6 min-h-screen mx-auto ">
         <div className="flex flex-col gap-10">
           <div className="flex flex-col gap-3">
             <span className="before:mr-1 before:content-['/'] after:ml-1 after:content-['/']">

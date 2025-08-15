@@ -9,8 +9,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${manrope.className} antialiased relative bg-white`}>
-        <div className="py-5 bg-secondary">
+      <body className={`${manrope.className} antialiased bg-white`}>
+        <div className="lg:pt-5 pb-5 bg-secondary">
           <Header />
         </div>
         <div className="mx-auto">{children}</div>

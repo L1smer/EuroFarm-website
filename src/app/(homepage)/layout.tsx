@@ -1,5 +1,5 @@
 import "../awp.css";
-import { cuprum } from "../lib/fonts";
+import { cuprum } from "./lib/fonts";
 
 export default function RootLayout({
   children,

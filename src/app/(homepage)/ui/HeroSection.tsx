@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
-import { manrope } from "../awp/lib/fonts";
+import { manrope } from "../../awp/lib/fonts";
 import { kaushanScript } from "../lib/fonts";
 import { motion } from "motion/react";
 

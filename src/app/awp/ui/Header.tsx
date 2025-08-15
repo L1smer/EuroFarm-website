@@ -26,8 +26,8 @@ export default function Header() {
   }, [isOpen]);
 
   return (
-    <div className="flex justify-between items-center h-[115px] px-2 w-[95%] bg-white font-bold text-primary mx-auto py-4 rounded-3xl">
-      <div className="w-[165px] mx-6 h-full flex justify-center items-center">
+    <div className="flex justify-between items-center h-[115px] px-2 w-full lg:w-[95%] bg-white font-bold text-primary mx-auto lg:py-4 lg:rounded-3xl">
+      <div className="w-[165px] lg:mx-6 h-full flex justify-center items-center">
         <Link href={"/awp"}>
           <Image
             src={"/awp/AWP-logo.svg"}

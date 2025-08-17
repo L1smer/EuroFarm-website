@@ -1,10 +1,9 @@
-import { useEffect, useRef } from "react";
+import { useCallback, useEffect, useRef } from "react";
 
 export function useSectionObserver() {
-  const sectionRef = useRef<HTMLElement | null>(null);
-
+  const observerRef = useRef<IntersectionObserver | null>(null);
   useEffect(() => {
-    const observer = new IntersectionObserver(
+    observerRef.current = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           const section = entry.target as HTMLElement;
@@ -39,11 +38,12 @@ export function useSectionObserver() {
       },
       { threshold: 0.5, rootMargin: "-100px" }
     );
-    if (sectionRef.current) observer.observe(sectionRef.current);
-    return () => {
-      if (sectionRef.current) observer.unobserve(sectionRef.current);
-    };
-  }, [sectionRef]);
+  }, []);
 
-  return sectionRef;
+  const ref = useCallback((node: HTMLElement | null) => {
+    if (!node) return;
+    return observerRef.current?.observe(node);
+  }, []);
+
+  return ref;
 }

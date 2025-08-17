@@ -1,8 +1,14 @@
 import Image from "next/image";
 import { Check } from "lucide-react";
-import type { ProductInfo, DosageInfo, InfoSection } from "@/app/awp/lib/types/productTypes";
+import type {
+  ProductInfo,
+  DosageInfo,
+  InfoSection,
+  ProductListInfo,
+} from "@/app/awp/lib/types/productTypes";
 import { JSX } from "react";
 import { sora } from "@/app/awp/lib/fonts";
+import { useState } from "react";
 
 export default function Product({
   productInfo,
@@ -54,7 +60,7 @@ export default function Product({
             <p className="font-extrabold text-lg sm:text-xl md:text-2xl 2xl:text-3xl uppercase text-[#e72e4d]">
               {productInfo.availableIn.length === animals.length
                 ? "всіх видів тварин"
-                : productInfo.availableIn.join()}
+                : productInfo.availableIn.join(", ")}
             </p>
             <div className="flex flex-wrap justify-center items-center gap-1">
               {productInfo.availableImgs.map((img, i) => (
@@ -145,7 +151,9 @@ function Info({ dosageInfo }: { dosageInfo: DosageInfo }) {
                   key={i}
                   className={`flex flex-col p-4 sm:p-5 min-h-[100px] ${
                     i % 2 === 0 ? "bg-[#f0f0f0]" : "bg-[#e0e0e0]"
-                  } ${!item && "hidden sm:flex"} justify-center items-center text-[#57aa43]`}
+                  } ${
+                    !item && "hidden sm:flex"
+                  } justify-center items-center text-center text-[#57aa43]`}
                 >
                   {item ? (
                     <>
@@ -167,6 +175,12 @@ function Info({ dosageInfo }: { dosageInfo: DosageInfo }) {
   );
 }
 
+function isMultiPLI(
+  pli: InfoSection["productListInfo"]
+): pli is ProductListInfo[] {
+  return Array.isArray(pli);
+}
+
 function ProductInfoSection({
   infoSection,
   children,
@@ -174,6 +188,8 @@ function ProductInfoSection({
   infoSection: InfoSection;
   children: React.ReactNode;
 }) {
+  const { productListInfo } = infoSection;
+
   return (
     <div className="w-full rounded-xl overflow-hidden bg-[url('/awp/bg-list.png')] bg-cover text-white shadow-lg">
       <div
@@ -181,45 +197,80 @@ function ProductInfoSection({
         className="flex flex-col lg:flex-row gap-8 p-4 md:p-8"
       >
         <div className="flex flex-col justify-center gap-6 w-full lg:w-1/2">
-          <p className="font-medium text-lg sm:text-xl md:text-2xl">
-            {infoSection.mainText}
-          </p>
-          <ul className="font-bold text-[18px] sm:text-xl md:text-2xl text-white flex flex-col justify-center gap-3 sm:p-4 rounded-lg">
-            {infoSection.listItems.map((item: any, i: any) => (
-              <li key={i} className="flex flex-row gap-2 items-center">
-                <Check size={30} className="min-w-6 sm:min-w-8" color="white" />
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
+          {!!infoSection.mainText && (
+            <p className="font-medium text-lg sm:text-xl md:text-2xl">
+              {infoSection.mainText}
+            </p>
+          )}
+
+          {Array.isArray(infoSection.listItems) &&
+            infoSection.listItems.length > 0 && (
+              <ul className="font-bold text-[18px] sm:text-xl md:text-2xl text-white flex flex-col justify-center gap-3 sm:p-4 rounded-lg">
+                {infoSection.listItems.map((item, i) => (
+                  <li key={i} className="flex flex-row gap-2 items-center">
+                    <Check
+                      size={30}
+                      className="min-w-6 sm:min-w-8"
+                      color="white"
+                    />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            )}
         </div>
 
-        <div className="flex-1 flex flex-col justify-center gap-2 bg-white text-[#2c2c2c] p-6 rounded-xl shadow-md">
-          <p className="text-base md:text-lg text-center font-semibold">
+        <div className="flex-1 flex flex-col justify-center gap-4 bg-white text-[#2c2c2c] p-6 rounded-xl shadow-md">
+          <p className="text-base md:text-lg text-center font-semibold border-b pb-3">
             {infoSection.containsText}
           </p>
-          {infoSection.productListInfo!.listComposition?.length > 0 && (
-            <div>
-              <h3
-                style={{ color: infoSection.bgColor }}
-                className="text-lg border-t border-black pt-3 md:text-xl font-bold mb-4 text-center"
-              >
-                {infoSection.productListInfo!.headingOfList}
-              </h3>
-              <ul className="grid grid-cols-1 sm:grid-cols-2 place-items-center gap-x-6 gap-y-3 text-sm md:text-base break-words">
-                {infoSection.productListInfo!.listComposition.map(
-                  (item: any, i: any) => (
-                    <li
-                      key={i}
-                      className="flex items-center justify-center text-center w-full max-w-full sm:max-w-sm"
-                    >
-                      <span className="font-semibold text-[#333]">{item}</span>
-                    </li>
-                  )
-                )}
-              </ul>
-            </div>
-          )}
+          <div className="flex flex-col w-full justify-around gap-4 items-center">
+            {isMultiPLI(productListInfo) ? (
+              productListInfo.map((list, i) => (
+                <div key={i} className="flex flex-col w-full lg:text-center self-start lg:items-center gap-2 ">
+                  <h5
+                    style={{ color: infoSection.bgColor }}
+                    className="text-2xl pt-3 lg:text-xl font-bold lg:text-center"
+                  >
+                    {list.headingOfList ?? ''}
+                  </h5>
+                  <ul className="flex flex-col items-center justify-center gap-1">
+                    {list.listComposition.map((composition, i) => (
+                      <li
+                        className="w-full max-w-full lg::max-w-60 font-semibold"
+                        key={i}
+                      >
+                        {composition}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))
+            ) : (
+              <div>
+                <h3
+                  style={{ color: infoSection.bgColor }}
+                  className="border-black pt-3 text-xl font-bold mb-4 text-center"
+                >
+                  {productListInfo?.headingOfList ?? "Основні складові"}
+                </h3>
+                <ul className="grid grid-cols-1 sm:grid-cols-2 place-items-center gap-x-6 gap-y-3 text-sm md:text-base break-words">
+                  {productListInfo!.listComposition.map(
+                    (item: any, i: any) => (
+                      <li
+                        key={i}
+                        className="flex items-center justify-center text-center w-full max-w-full sm:max-w-sm"
+                      >
+                        <span className="font-semibold text-[#333]">
+                          {item}
+                        </span>
+                      </li>
+                    )
+                  )}
+                </ul>
+              </div>
+            )}
+          </div>
         </div>
       </div>
       {children}

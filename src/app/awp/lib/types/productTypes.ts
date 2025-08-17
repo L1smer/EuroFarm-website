@@ -1,4 +1,5 @@
-type ProductListInfo = {
+export type ProductListInfo = {
+  formOfProduct?: string;
   headingOfList: string;
   listComposition: string[];
 };
@@ -8,7 +9,7 @@ export type InfoSection = {
   listItems: string[];
   bgColor: string;
   containsText?: string;
-  productListInfo?: ProductListInfo;
+  productListInfo?: ProductListInfo | ProductListInfo[];
 };
 
 type DosageItem = {

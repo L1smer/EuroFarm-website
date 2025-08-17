@@ -794,15 +794,17 @@
       ],
       "bgColor": "rgba(255, 136, 0, 0.4)",
       "containsText": "Порошок молозива з сироваткових білків",
-      "productListInfo": {
-        "headingOfList": "Хімічний аналіз Forlife",
-        "listComposition": [
-          "Сирі білки 81,00%",
-          "Cирі жири 1,30 %",
-          "Cира зола 2,10 %",
-          "Cира целюлоза 0,00%"
-        ]
-      }
+      "productListInfo": [
+        {
+          "headingOfList": "Хімічний аналіз Forlife",
+          "listComposition": [
+            "Сирі білки 81,00%",
+            "Cирі жири 1,30 %",
+            "Cира зола 2,10 %",
+            "Cира целюлоза 0,00%"
+          ]
+        }
+      ]
     },
     "availableImgs": [
       {

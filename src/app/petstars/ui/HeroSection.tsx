@@ -18,6 +18,7 @@ export default function HeroSection() {
           height={400}
           alt="Логотип PetStars"
           className="w-[472px] h-[160px]"
+          priority
         />
         <div className="flex flex-col justify-center font-medium items-center text-center text-white gap-5 text-xl max-w-[900px]">
           <p>

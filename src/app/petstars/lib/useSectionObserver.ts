@@ -36,7 +36,7 @@ export function useSectionObserver() {
           }
         });
       },
-      { threshold: 0.5, rootMargin: "-100px" }
+      { root: null ,threshold: 1, rootMargin: "" }
     );
   }, []);
 

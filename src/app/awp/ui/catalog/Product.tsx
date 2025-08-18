@@ -8,7 +8,6 @@ import type {
 } from "@/app/awp/lib/types/productTypes";
 import { JSX } from "react";
 import { sora } from "@/app/awp/lib/fonts";
-import { useState } from "react";
 
 export default function Product({
   productInfo,
@@ -256,7 +255,7 @@ function ProductInfoSection({
                 </h3>
                 <ul className="grid grid-cols-1 sm:grid-cols-2 place-items-center gap-x-6 gap-y-3 text-sm md:text-base break-words">
                   {productListInfo!.listComposition.map(
-                    (item: any, i: any) => (
+                    (item, i) => (
                       <li
                         key={i}
                         className="flex items-center justify-center text-center w-full max-w-full sm:max-w-sm"

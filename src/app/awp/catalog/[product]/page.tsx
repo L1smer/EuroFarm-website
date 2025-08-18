@@ -41,7 +41,7 @@ export default async function ProductPage({
   searchParams,
 }: {
   params: Promise<{ product: ProductInfo }>;
-  searchParams: Promise<{ productTitle?: string }>;
+  searchParams: Promise<{ productTitle: string }>;
 }) {
   const { product } = await params;
   const { productTitle } = await searchParams;
@@ -51,9 +51,9 @@ export default async function ProductPage({
     (product) => productTitle === product.logo
   );
 
-  return (
-    <Product
-      productInfo={choosedProduct || products[0]}
+  return choosedProduct && (
+     <Product
+      productInfo={choosedProduct}
       Logo={logoMap[choosedProduct!.logo]}
       animals={allAnimals}
     />

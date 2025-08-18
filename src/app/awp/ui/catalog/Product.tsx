@@ -18,7 +18,7 @@ export default function Product({
   Logo: JSX.Element;
   animals: string[];
 }) {
-  const isSimpleProduct = !productInfo.infoSection.containsText?.length;
+  const isSimpleProduct = productInfo.infoSection.containsText?.length;
 
   return (
     <article className="container mx-auto overflow-x-hidden px-4 py-8 md:py-16 flex flex-col">

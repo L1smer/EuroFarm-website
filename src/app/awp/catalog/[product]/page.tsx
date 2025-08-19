@@ -43,7 +43,6 @@ export default async function ProductPage({
   params: Promise<{ product: ProductInfo }>;
   searchParams: Promise<{ productTitle: string }>;
 }) {
-  const { product } = await params;
   const { productTitle } = await searchParams;
   const products = await getProducts();
 

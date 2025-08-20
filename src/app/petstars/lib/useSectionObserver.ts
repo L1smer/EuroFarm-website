@@ -2,47 +2,68 @@ import { useCallback, useEffect, useRef } from "react";
 
 export function useSectionObserver() {
   const observerRef = useRef<IntersectionObserver | null>(null);
+  const pendingNodeRef = useRef<HTMLElement | null>(null);
+  const bgImageRef = useRef<HTMLDivElement | null>(null);
+
   useEffect(() => {
-    observerRef.current = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          const section = entry.target as HTMLElement;
-          if (entry.isIntersecting) {
-            section
-              .querySelectorAll(".reveal")
-              .forEach((el) => el.classList.add("is-visible"));
-          }
-          const bg = section.dataset.bg;
-          let bgImage = document.getElementById(
-            "bg-image"
-          ) as HTMLDivElement | null;
-
-          if (!bgImage) {
-            bgImage = document.createElement("div");
-            bgImage.id = "bg-image";
-            bgImage.className =
-              "fixed inset-0 -z-10 pointer-events-none opacity-0 transition-opacity duration-700 bg-center bg-cover";
-            document.body.prepend(bgImage);
-          }
-
-          if (bg) {
-            if (bg[0] === "#") {
-              bgImage.style.opacity = "0";
-              document.documentElement.style.setProperty("--page-bg", bg);
-            } else {
-              bgImage.style.backgroundImage = bg;
-              bgImage.style.opacity = "1";
-            }
-          }
-        });
-      },
-      { threshold: 0.5, rootMargin: "-100px" }
-    );
+    let el = document.getElementById("bg-image") as HTMLDivElement | null; // <- use the same id everywhere
+    if (!el) {
+      el = document.createElement("div");
+      el.id = "bg-image";
+      el.className =
+        "fixed inset-0 -z-10 pointer-events-none opacity-0 transition-opacity duration-700 bg-center bg-cover";
+      document.body.prepend(el);
+    }
+    bgImageRef.current = el;
   }, []);
+
+  const callback = useCallback((entries: IntersectionObserverEntry[]) => {
+    const bgImage = bgImageRef.current;
+
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      const section = entry.target as HTMLElement;
+
+      section.querySelectorAll(".reveal").forEach((el) => el.classList.add("is-visible"));
+
+      const bg = section.dataset.bg;
+      if (!bg) return;
+
+      if (bg.startsWith("#")) {
+        if (bgImage) bgImage.style.opacity = "0";
+        document.documentElement.style.setProperty("--page-bg", bg);
+      } else {
+        const cssBg = bg.startsWith("url(") ? bg : `url("${bg}")`;
+        if (bgImage) {
+          bgImage.style.backgroundImage = cssBg;
+          bgImage.style.opacity = "1";
+        }
+      }
+    });
+  }, []);
+
+  useEffect(() => {
+    observerRef.current?.disconnect();
+    observerRef.current = new IntersectionObserver(callback, {
+      root: null,
+      threshold: 0.15,
+      rootMargin: "0px 0px -20%",
+    });
+
+    if (pendingNodeRef.current) {
+      observerRef.current.observe(pendingNodeRef.current);
+    }
+
+    return () => observerRef.current?.disconnect();
+  }, [callback]);
 
   const ref = useCallback((node: HTMLElement | null) => {
     if (!node) return;
-    return observerRef.current?.observe(node);
+    if (observerRef.current) {
+      observerRef.current.observe(node);
+    } else {
+      pendingNodeRef.current = node;
+    }
   }, []);
 
   return ref;

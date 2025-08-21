@@ -8,9 +8,9 @@ export default function ProductCard({ product }: { product: ProductInfo }) {
   return (
     <Link
       href={`/awp/catalog/product?productTitle=${product.logo}`}
-      className="min-h-[470px] w-[305px] group/card overflow-hidden flex flex-col items-center border border-[#777] rounded-3xl box-border"
+      className="min-h-[470px] m-2 md:w-[305px] group/card overflow-hidden flex flex-col items-center border border-[#777] rounded-3xl box-border"
     >
-      <div className="relative w-full h-[150px] bg-[url('/awp/bg-list.png')] bg-cover bg-center group-hover/card:bg-right transition-all duration-500">
+      <div className="relative w-full min-h-[150px] bg-[url('/awp/bg-list.png')] bg-cover bg-center group-hover/card:bg-right transition-all duration-500">
         <div
           className={`absolute inset-0`}
           style={{ backgroundColor: product.infoSection.bgColor }}

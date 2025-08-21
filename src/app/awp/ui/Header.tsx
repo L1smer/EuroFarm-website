@@ -88,9 +88,9 @@ export default function Header() {
       <div
         className={clsx(
           "fixed inset-0 z-40 transition-opacity duration-300",
-          "bg-black/50", // backdrop
+          "bg-black/50",
           isOpen ? "opacity-100" : "opacity-0 pointer-events-none",
-          "motion-reduce:transition-none" // accessibility
+          "motion-reduce:transition-none"
         )}
         onClick={() => setOpen(false)}
       />

@@ -1,12 +1,13 @@
 "use client";
 import { useSectionObserver } from "../lib/useSectionObserver";
 import { playfairDisplay } from "../lib/fonts";
+import Image from "next/image";
 
 export default function OurValueSection() {
   const sectionRef = useSectionObserver();
   return (
     <section ref={sectionRef} className="panel" data-bg="#C6BBE5">
-      <div className="flex justify-center items-center">
+      <div className="flex flex-wrap gap-10 justify-center items-center">
         <div className="flex flex-col justify-center items-center gap-5">
           <h2
             className={`${playfairDisplay.className} antialiased text-[40px]`}
@@ -17,7 +18,7 @@ export default function OurValueSection() {
             <p className="reveal">
               Маючи багатий досвід у сфері кормів для домашніх тварин та
               нутрицевтиків протягом останніх десятиліть, PetStars вирізняється
-              своїми експертними знаннями у розробці високотехнологічних,
+              своїми знаннями у розробці високотехнологічних,
               повністю натуральних рецептів та продуктів.
             </p>
             <p className="reveal">
@@ -28,6 +29,9 @@ export default function OurValueSection() {
               улюбленців.
             </p>
           </div>
+        </div>
+        <div className="morph-wrap">
+          <Image src='/petstars/petstars-intro.jpg' width={778} height={750} alt="Зображення заводу"/>
         </div>
       </div>
     </section>

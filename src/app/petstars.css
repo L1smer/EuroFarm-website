@@ -37,6 +37,65 @@ body {
   transform: translateY(0);
 }
 
+.morph-wrap {
+  width: min(720px, 92vw);
+  aspect-ratio: 1.25 / 1;
+  position: relative;
+  overflow: hidden;
+  clip-path: path(
+    "M40,120 Q70,40 160,30 L540,30 Q630,30 660,110 L680,220 Q700,300 640,360 L560,430 Q500,490 410,500 L190,500 Q110,500 80,430 L60,350 Q40,290 40,240 Z"
+  );
+  animation: corners 15s cubic-bezier(0.6, 0.05, 0.2, 0.95) infinite;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.2);
+}
+
+.morph-wrap img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: drift 18s ease-in-out infinite;
+}
+
+@keyframes corners {
+  0% {
+    clip-path: path(
+      "M40,120 Q70,40 160,30 L540,30 Q630,30 660,110 L680,220 Q700,300 640,360 L560,430 Q500,490 410,500 L190,500 Q110,500 80,430 L60,350 Q40,290 40,240 Z"
+    );
+  }
+  25% {
+    clip-path: path(
+      "M50,140 Q95,50 190,40 L520,40 Q610,40 650,120 L670,210 Q690,300 610,360 L540,430 Q470,485 380,495 L200,495 Q120,495 85,430 L65,360 Q45,300 50,240 Z"
+    );
+  }
+  50% {
+    clip-path: path(
+      "M60,160 Q120,70 230,55 L510,55 Q595,55 640,130 L660,210 Q680,290 610,345 L520,420 Q455,480 350,490 L210,490 Q135,490 95,425 L75,355 Q60,305 60,250 Z"
+    );
+  }
+  75% {
+    clip-path: path(
+      "M35,150 Q80,60 210,45 L540,45 Q630,45 665,115 L685,210 Q705,310 620,370 L520,445 Q445,500 320,505 L190,505 Q120,505 85,435 L60,360 Q40,300 35,245 Z"
+    );
+  }
+  100% {
+    clip-path: path(
+      "M40,120 Q70,40 160,30 L540,30 Q630,30 660,110 L680,220 Q700,300 640,360 L560,430 Q500,490 410,500 L190,500 Q110,500 80,430 L60,350 Q40,290 40,240 Z"
+    );
+  }
+}
+
+@keyframes drift {
+  0%,
+  100% {
+    transform: scale(1.05) translate(0, 0);
+  }
+  50% {
+    transform: scale(1.09) translate(-1.5%, -1%);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .reveal {
     transition: none;
@@ -45,5 +104,10 @@ body {
   }
   body {
     transition: none;
+  }
+
+  .morph-wrap,
+  .morph-wrap img {
+    animation: none;
   }
 }

@@ -7,7 +7,6 @@
   --color-accent: #7cb41c;
 }
 
-
 @layer utilities {
   .shadow-text {
     text-shadow: 3px 2px 2px rgba(0, 0, 0, 0.25);
@@ -15,8 +14,8 @@
 
   .vertical-text {
     writing-mode: vertical-rl;
-    color: #FFFFFF;
-    -webkit-text-stroke: 1px #FFFFFF00;
+    color: #ffffff;
+    -webkit-text-stroke: 1px #ffffff00;
     -webkit-text-stroke-width: 3px;
     background-color: transparent;
     background-clip: text;

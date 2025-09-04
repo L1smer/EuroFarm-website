@@ -1,7 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --page-bg: white;
+  --page-bg: #E7F0FA;
+}
+
+@theme {
+  --color-primary: #F5F5DC;
+  --color-secondary: #8C5E3C;
+  --color-accent: #6A994E;
+  --color-text: #E76F51;
 }
 
 html,
@@ -10,7 +17,6 @@ body {
 }
 
 body {
-  background: var(--page-bg);
   transition: all 700ms ease;
   position: relative;
 }

@@ -1,0 +1,315 @@
+[
+  {
+    "pet": "собака",
+    "type": "вологий",
+    "title": "Шматочки в підливі для собак",
+    "variety": [
+      {
+        "weight": "415г",
+        "taste": [
+          {
+            "meat": "Курка",
+            "img": "/petstars/catalog/dog/415g-can/chicken.png"
+          },
+          {
+            "meat": "Яловичина",
+            "img": "/petstars/catalog/dog/415g-can/beef.png"
+          },
+          {
+            "meat": "Печінка",
+            "img": "/petstars/catalog/dog/415g-can/liver.png"
+          },
+          {
+            "meat": "Оленина",
+            "img": "/petstars/catalog/dog/415g-can/venison.png"
+          }
+        ]
+      },
+      {
+        "weight": "1240г",
+        "taste": [
+          {
+            "meat": "Курка",
+            "img": "/petstars/catalog/dog/1240g-can/chicken.png"
+          },
+          {
+            "meat": "Яловичина",
+            "img": "/petstars/catalog/dog/1240g-can/beef.png"
+          },
+          {
+            "meat": "Печінка",
+            "img": "/petstars/catalog/dog/1240g-can/liver.png"
+          },
+          {
+            "meat": "Оленина",
+            "img": "/petstars/catalog/dog/1240g-can/venison.png"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "pet": "собака",
+    "type": "вологий",
+    "title": "Шматочки в підливі Flow Pack для собак",
+    "variety": [
+      {
+        "weight": "400г",
+        "taste": [
+          {
+            "meat": "Курка + Індичка",
+            "img": "/petstars/catalog/dog/400g-flowpack/chicken&turkey.png"
+          },
+          {
+            "meat": "Яловичина + Баранина",
+            "img": "/petstars/catalog/dog/400g-flowpack/beef&lamb.png"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "pet": "собака",
+    "type": "вологий",
+    "title": "Шматочки в підливі Multipack для собак",
+    "variety": [
+      {
+        "weight": "1200г",
+        "taste": [
+          {
+            "meat": "Мікс (Яловичина, Баранина, Курка, Індичка)",
+            "img": "/petstars/catalog/dog/1200g-multipack/multipack.png"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "pet": "собака",
+    "type": "вологий",
+    "title": "Повноцінний вологий корм (Салямі)",
+    "variety": [
+      {
+        "weight": "450г",
+        "taste": [
+          {
+            "meat": "Курка",
+            "img": "/petstars/catalog/dog/450g-salami/chicken.png"
+          },
+          {
+            "meat": "Яловичина",
+            "img": "/petstars/catalog/dog/450g-salami/beef.png"
+          }
+        ]
+      },
+      {
+        "weight": "900г",
+        "taste": [
+          {
+            "meat": "Курка",
+            "img": "/petstars/catalog/dog/900g-salami/chicken.png"
+          },
+          {
+            "meat": "Яловичина",
+            "img": "/petstars/catalog/dog/900g-salami/beef.png"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "pet": "собака",
+    "type": "сухий",
+    "title": "Повноцінний сухий корм для собак",
+    "variety": [
+      {
+        "weight": "2кг",
+        "taste": [
+          {
+            "meat": "Курка",
+            "img": "/petstars/catalog/dog/2kg-dryfood/chicken.png"
+          },
+          {
+            "meat": "Яловичина",
+            "img": "/petstars/catalog/dog/2kg-dryfood/beef.png"
+          }
+        ]
+      },
+      {
+        "weight": "4кг",
+        "taste": [
+          {
+            "meat": "Курка",
+            "img": "/petstars/catalog/dog/4kg-dryfood/chicken.png"
+          },
+          {
+            "meat": "Яловичина",
+            "img": "/petstars/catalog/dog/4kg-dryfood/beef.png"
+          }
+        ]
+      },
+      {
+        "weight": "10кг",
+        "taste": [
+          {
+            "meat": "Курка",
+            "img": "/petstars/catalog/dog/10kg-dryfood/chicken.png"
+          },
+          {
+            "meat": "Яловичина",
+            "img": "/petstars/catalog/dog/10kg-dryfood/beef.png"
+          }
+        ]
+      },
+      {
+        "weight": "20кг",
+        "taste": [
+          {
+            "meat": "Курка",
+            "img": "/petstars/catalog/dog/20kg-dryfood/chicken.png"
+          },
+          {
+            "meat": "Яловичина",
+            "img": "/petstars/catalog/dog/20kg-dryfood/beef.png"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "pet": "кіт",
+    "type": "вологий",
+    "title": "Шматочки в підливі для котів",
+    "variety": [
+      {
+        "weight": "415г",
+        "taste": [
+          {
+            "meat": "Курка",
+            "img": "/petstars/catalog/cat/415g-can/chicken.png"
+          },
+          {
+            "meat": "Яловичина",
+            "img": "/petstars/catalog/cat/415g-can/beef.png"
+          },
+          {
+            "meat": "Печінка",
+            "img": "/petstars/catalog/cat/415g-can/liver.png"
+          },
+          {
+            "meat": "Оленина",
+            "img": "/petstars/catalog/cat/415g-can/venison.png"
+          },
+          {
+            "meat": "Риба",
+            "img": "/petstars/catalog/cat/415g-can/fish.png"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "pet": "кіт",
+    "type": "вологий",
+    "title": "Шматочки в підливі Flow Pack для котів",
+    "variety": [
+      {
+        "weight": "400г",
+        "taste": [
+          {
+            "meat": "Курка + Яловичина",
+            "img": "/petstars/catalog/cat/400g-flowpack/chicken&beef.png"
+          },
+          {
+            "meat": "Курка + Печінка + Кролик",
+            "img": "/petstars/catalog/cat/400g-flowpack/liver&rabbit.png"
+          },
+          {
+            "meat": "Риба + Лосось",
+            "img": "/petstars/catalog/cat/400g-flowpack/fish&salmon.png"
+          },
+          {
+            "meat": "Курка + Індичка",
+            "img": "/petstars/catalog/cat/400g-flowpack/chicken&turkey.png"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "pet": "кіт",
+    "type": "вологий",
+    "title": "Шматочки в підливі Multipack для котів",
+    "variety": [
+      {
+        "weight": "800г",
+        "taste": [
+          {
+            "meat": "Курка + Індичка",
+            "img": "/petstars/catalog/cat/800g-multipack/multipack.png"
+          }
+        ]
+      },
+      {
+        "weight": "1,2кг",
+        "taste": [
+          {
+            "meat": "Яловичина + Птиця + Баранина",
+            "img": "/petstars/catalog/cat/1200g-multipack/meat-multipack.png"
+          },
+          {
+            "meat": "Лосось + Біла риба + Тріска",
+            "img": "/petstars/catalog/cat/1200g-multipack/fish-multipack.png"
+          }
+        ]
+      },
+      {
+        "weight": "2,4кг",
+        "taste": [
+          {
+            "meat": "Птиця + Яловичина + Лосось + Біла риба",
+            "img": "/petstars/catalog/cat/2400g-multipack/multipack.png"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "pet": "кіт",
+    "type": "сухий",
+    "title": "Повноцінний сухий корм для котів",
+    "variety": [
+      {
+        "weight": "2кг",
+        "taste": [
+          {
+            "meat": "М'ясо",
+            "img": "/petstars/catalog/cat/2kg-dryfood/meat.png"
+          },
+          {
+            "meat": "Риба",
+            "img": "/petstars/catalog/cat/2kg-dryfood/fish.png"
+          }
+        ]
+      },
+      {
+        "weight": "10кг",
+        "taste": [
+          {
+            "meat": "М'ясо",
+            "img": "/petstars/catalog/cat/10kg-dryfood/meat.png"
+          }
+        ]
+      },
+      {
+        "weight": "18кг",
+        "taste": [
+          {
+            "meat": "М'ясо",
+            "img": "/petstars/catalog/cat/18kg-dryfood/meat.png"
+          }
+        ]
+      }
+    ]
+  }
+]

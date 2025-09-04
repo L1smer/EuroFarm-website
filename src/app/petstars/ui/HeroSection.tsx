@@ -20,6 +20,7 @@ export default function HeroSection() {
           height={400}
           alt="Логотип PetStars"
           className="w-[472px] h-[160px]"
+          priority
         />
       </div>
       <div className="mb-10 animate-bounce z-20">

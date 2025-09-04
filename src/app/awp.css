@@ -14,8 +14,8 @@
 
   .vertical-text {
     writing-mode: vertical-rl;
-    color: #FFFFFF;
-    -webkit-text-stroke: 1px #FFFFFF00;
+    color: #ffffff;
+    -webkit-text-stroke: 1px #ffffff00;
     -webkit-text-stroke-width: 3px;
     background-color: transparent;
     background-clip: text;

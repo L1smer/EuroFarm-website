@@ -6,7 +6,7 @@ export function useSectionObserver() {
   const bgImageRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    let el = document.getElementById("bg-image") as HTMLDivElement | null; // <- use the same id everywhere
+    let el = document.getElementById("bg-image") as HTMLDivElement | null;
     if (!el) {
       el = document.createElement("div");
       el.id = "bg-image";
@@ -23,8 +23,15 @@ export function useSectionObserver() {
     entries.forEach((entry) => {
       if (!entry.isIntersecting) return;
       const section = entry.target as HTMLElement;
+      if (section.id === "heroSection") {
+        document.getElementById("logo")!.classList.add("opacity-0");
+      } else {
+        document.getElementById("logo")!.classList.add("opacity-100");
+      }
 
-      section.querySelectorAll(".reveal").forEach((el) => el.classList.add("is-visible"));
+      section
+        .querySelectorAll(".reveal")
+        .forEach((el) => el.classList.add("is-visible"));
 
       const bg = section.dataset.bg;
       if (!bg) return;
@@ -43,10 +50,9 @@ export function useSectionObserver() {
   }, []);
 
   useEffect(() => {
-    observerRef.current?.disconnect();
     observerRef.current = new IntersectionObserver(callback, {
       root: null,
-      threshold: 0.15,
+      threshold: 0.7,
       rootMargin: "0px 0px -20%",
     });
 

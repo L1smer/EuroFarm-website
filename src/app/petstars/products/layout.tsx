@@ -1,6 +1,5 @@
 import "@/app/petstars.css";
-import { montserrat } from "./lib/fonts";
-import Header from "./ui/Header";
+import { montserrat } from "../lib/fonts";
 
 export default function RootLayout({
   children,
@@ -9,8 +8,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body style={{ backgroundColor: "var(--page-bg)" }} className={`${montserrat.className} antialiased`}>
-        <Header/>
+      <body className={`${montserrat.className} antialiased`}>
         {children}
       </body>
     </html>

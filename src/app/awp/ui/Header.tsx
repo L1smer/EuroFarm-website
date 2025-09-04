@@ -10,7 +10,7 @@ import { X } from "lucide-react";
 const links: { name: string; href: string }[] = [
   { name: "Головна", href: "/awp" },
   { name: "Про нас", href: "/awp/about" },
-  { name: "Каталог", href: "/awp/catalog" },
+  { name: "Каталог", href: "/awp/products" },
 ];
 
 export default function Header() {
@@ -103,7 +103,7 @@ export default function Header() {
           isOpen ? "translate-x-0" : "translate-x-full",
           "motion-reduce:transition-none motion-reduce:transform-none flex flex-col justify-start"
         )}
-        onClick={(e) => e.stopPropagation()} // keep clicks inside from closing
+        onClick={(e) => e.stopPropagation()}
       >
         <button
           className="self-end mt-9 mx-7"

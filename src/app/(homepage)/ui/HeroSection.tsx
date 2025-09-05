@@ -3,13 +3,102 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
-import { manrope } from "../../awp/lib/fonts";
+import { manrope } from "@/app/awp/lib/fonts";
 import { kaushanScript } from "../lib/fonts";
 import { motion } from "motion/react";
 
+const links: string[] = ["/awp", "/petstars"];
+
 export default function HeroSection() {
   return (
-    <section className="group/scene relative bg-white">
+    <section
+      className="
+    group/scene relative
+    bg-white "
+    >
+      <div className="lg:hidden px-4 pt-6 pb-10 max-w-[1024px] mx-auto">
+        {/* герой: статичне фото ферми */}
+        <div className="relative w-full h-[260px] sm:h-[320px] md:h-[380px] rounded-[28px] overflow-hidden">
+          <Image
+            src="/farm.jpeg"
+            alt="Ферма на заході сонця"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent" />
+        </div>
+
+        {/* заголовок + опис */}
+        <div className="mt-6 text-center">
+          <h1 className="font-bold text-3xl sm:text-4xl leading-tight">
+            Преміальні кормові добавки для здоров’я тварин
+          </h1>
+          <p className="mt-3 text-base sm:text-lg leading-7 text-black/80">
+            Евро Фарм — ексклюзивний представник в Україні рішень від AWP SpA та
+            інших виробників. Постачаємо інноваційні кормові добавки та
+            натуральні ветеринарні препарати.
+          </p>
+        </div>
+
+        {/* дві великі картки-кнопки */}
+        <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <Link
+            href="/awp"
+            className="relative h-[120px] rounded-2xl overflow-hidden"
+          >
+            <Image
+              src="/chicken-awp.jpg"
+              alt="AWP"
+              fill
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-black/10" />
+            <div className="absolute left-4 top-1/2 -translate-y-1/2 z-10">
+              <span className={`${manrope.className} text-3xl text-white/90`}>
+                AWP
+              </span>
+              <div className="mt-1 text-white/80 text-sm max-w-[220px]">
+                20 років досліджень та інновацій на основі фітомолекул
+              </div>
+            </div>
+            <ChevronRight
+              size={28}
+              color="white"
+              className="absolute right-4 top-1/2 -translate-y-1/2 opacity-80"
+            />
+          </Link>
+
+          <Link
+            href="/petstars"
+            className="relative h-[120px] rounded-2xl overflow-hidden"
+          >
+            <Image
+              src="/cat-petstars.jpg"
+              alt="PetStars"
+              fill
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#7E216A]/80 via-[#7E216A]/60 to-black/10" />
+            <div className="absolute left-4 top-1/2 -translate-y-1/2 z-10">
+              <span
+                className={`${kaushanScript.className} text-3xl text-white`}
+              >
+                PetStars
+              </span>
+              <div className="mt-1 text-white/90 text-sm max-w-[220px]">
+                Здорове харчування для улюбленців на натуральній основі
+              </div>
+            </div>
+            <ChevronRight
+              size={28}
+              color="white"
+              className="absolute right-4 top-1/2 -translate-y-1/2 opacity-90"
+            />
+          </Link>
+        </div>
+      </div>
+
       <div className="hidden lg:block h-screen">
         <div
           className="
@@ -27,13 +116,14 @@ export default function HeroSection() {
       group-has-[.card-pet:hover]/scene:opacity-100
     "
         />
-
+        {/* ВСЯ сцена */}
         <div
           className="
           relative max-w-[1440px] mx-auto h-full
           flex flex-col lg:justify-center items-center lg:pl-12
         "
         >
+          {/* Верх */}
           <div className="w-full flex flex-row gap-6 justify-between items-center">
             <div className="max-w-[500px] gap-10 h-full flex flex-col justify-between my-0 p-2 text-center lg:text-left lg:self-center">
               <div className="flex flex-col flex-1 mt-15">
@@ -64,7 +154,7 @@ export default function HeroSection() {
                     className="group-has-[.card-awp:hover]/scene:hidden
                 group-has-[.card-pet:hover]/scene:hidden"
                   >
-                    Євро Фарм — ексклюзивний представник в Україні передових
+                    Евро Фарм — ексклюзивний представник в Україні передових
                     рішень від AWP SpA та інших виробників. Ми постачаємо
                     інноваційні кормові добавки та натуральні ветеринарні
                     препарати від провідних світових брендів

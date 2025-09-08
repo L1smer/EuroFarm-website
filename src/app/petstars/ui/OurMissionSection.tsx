@@ -26,7 +26,7 @@ export default function OurMissionSection() {
     return () => observer.disconnect();
   }, []);
 
-  const windowWidth = window.innerWidth;
+  const windowWidth = typeof window !== "undefined" ? window.innerWidth : 1024;
   return (
     <section
       ref={(node) => {

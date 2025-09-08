@@ -22,7 +22,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         style={{ backgroundColor: "var(--page-bg)" }}
-        className={`${montserrat.className} antialiased`}
+        className={`${montserrat.className} antialiased overflow-x-hidden`}
       >
         <Header />
         {children}

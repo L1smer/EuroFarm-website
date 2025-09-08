@@ -12,6 +12,7 @@ export default function OurMissionSection() {
 
   useEffect(() => {
     if (!localSectionRef.current) return;
+    if (!sectionRef) return;
 
     const observer = new IntersectionObserver(
       ([entry]) => setShowOverlay(entry.isIntersecting),

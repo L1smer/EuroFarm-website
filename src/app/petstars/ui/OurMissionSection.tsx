@@ -10,6 +10,10 @@ export default function OurMissionSection() {
   const localSectionRef = useRef<HTMLElement | null>(null);
   const [windowWidth, setWindowWidth] = useState<number>(1024);
 
+  useEffect(() => {
+    setWindowWidth(window.innerWidth);
+  }, []);
+
   return (
     <section
       ref={(node) => {
@@ -21,7 +25,6 @@ export default function OurMissionSection() {
         windowWidth > 768 ? "#B2E2B8" : "url(/petstars/petstars-mission-2.jpg)"
       }
     >
-      
       <div className="relative flex flex-wrap flex-row-reverse gap-20 h-full justify-center items-center z-2">
         <div className="flex flex-col justify-start items-center h-175 py-10 max-w-150 gap-5 font-semibold">
           <h2
@@ -29,7 +32,7 @@ export default function OurMissionSection() {
           >
             Наша місія
           </h2>
-          <div className="flex flex-col gap-5 text-justify w-ful">
+          <div className="flex flex-col gap-5 text-justify w-full">
             <div className="reveal flex items-center gap-10 justify-center md:justify-between">
               <p className="max-w-[400px]">
                 Наша місія полягає в розробці передових кормів для домашніх

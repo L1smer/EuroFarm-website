@@ -8,11 +8,13 @@ import Image from "next/image";
 export default function OurMissionSection() {
   const sectionRef = useSectionObserver();
   const localSectionRef = useRef<HTMLElement | null>(null);
-  const [showOverlay, setShowOverlay] = useState(false);
+  const [showOverlay, setShowOverlay] = useState<boolean>(false);
+  const [windowWidth, setWindowWidth] = useState<number>(1024);
 
   useEffect(() => {
     if (!localSectionRef.current) return;
     if (!sectionRef) return;
+    setWindowWidth(window.innerWidth);
 
     const observer = new IntersectionObserver(
       ([entry]) => setShowOverlay(entry.isIntersecting),
@@ -26,7 +28,6 @@ export default function OurMissionSection() {
     return () => observer.disconnect();
   }, []);
 
-  const windowWidth = typeof window !== "undefined" ? window.innerWidth : 1024;
   return (
     <section
       ref={(node) => {

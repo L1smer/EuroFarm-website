@@ -17,6 +17,7 @@ body {
 }
 
 body {
+  background-color: transparent;
   transition: all 700ms ease;
   position: relative;
 }

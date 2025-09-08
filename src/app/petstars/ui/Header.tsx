@@ -15,7 +15,7 @@ const links: { name: string; href: string }[] = [
 export default function Header() {
   const [isOpen, setOpen] = useState<boolean>(false);
   return (
-    <header className="fixed z-5 top-3 px-5 md:px-10 w-full h-30 flex justify-between items-center">
+    <header className="fixed z-5 top-3 px-5 md:px-10 w-full h-15 md:h-30 flex justify-between items-center">
       <Link href="/petstars">
         <Image
           src={"/petstars/petstars-logo.png"}

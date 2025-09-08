@@ -20,7 +20,7 @@ export default function OurMissionSection() {
       ([entry]) => setShowOverlay(entry.isIntersecting),
       {
         root: null,
-        threshold: 0.7,
+        threshold: 0.1,
       }
     );
 
@@ -39,11 +39,9 @@ export default function OurMissionSection() {
         windowWidth > 768 ? "#B2E2B8" : "url(/petstars/petstars-mission-2.jpg)"
       }
     >
-      {showOverlay && (
-        <div className="fixed block md:hidden inset-0 w-full bg-black/40 z-1 transition-all" />
-      )}
+      
       <div className="relative flex flex-wrap flex-row-reverse gap-20 h-full justify-center items-center z-2">
-        <div className="flex flex-col justify-start items-center h-175 py-10 max-w-150 gap-5 text-white md:text-black">
+        <div className="flex flex-col justify-start items-center h-175 py-10 max-w-150 gap-5 font-semibold">
           <h2
             className={`${playfairDisplay.className} antialiased text-[40px]`}
           >

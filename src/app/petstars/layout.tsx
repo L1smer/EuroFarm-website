@@ -6,9 +6,10 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Pet Stars",
   description: "Pet Stars website",
-  other: {
-    "apple-mobile-web-app-capable": "yes",
-    "apple-mobile-web-app-status-bar-style": "black-translucent",
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+    viewportFit: "cover",
   },
 };
 

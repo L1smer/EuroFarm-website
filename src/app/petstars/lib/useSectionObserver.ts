@@ -37,10 +37,11 @@ export function useSectionObserver() {
       if (!bg) return;
 
       if (bg.startsWith("#")) {
+        document.body.style.background = bg;
         if (bgImage) bgImage.style.opacity = "0";
-        document.documentElement.style.setProperty("--page-bg", bg);
       } else {
         const cssBg = bg.startsWith("url(") ? bg : `url("${bg}")`;
+        document.body.style.backgroundImage = cssBg; // fallback for iOS status bar
         if (bgImage) {
           bgImage.style.backgroundImage = cssBg;
           bgImage.style.opacity = "1";
@@ -53,7 +54,6 @@ export function useSectionObserver() {
     observerRef.current = new IntersectionObserver(callback, {
       root: null,
       threshold: 0.1,
-      
     });
 
     if (pendingNodeRef.current) {

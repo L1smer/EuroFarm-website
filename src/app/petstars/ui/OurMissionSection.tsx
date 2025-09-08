@@ -30,7 +30,7 @@ export default function OurMissionSection() {
             Наша місія
           </h2>
           <div className="flex flex-col gap-5 text-justify w-ful">
-            <div className="reveal flex items-center justify-center md:justify-between">
+            <div className="reveal flex items-center gap-10 justify-center md:justify-between">
               <p className="max-w-[400px]">
                 Наша місія полягає в розробці передових кормів для домашніх
                 тварин, які поєднують здоров'я, сталий розвиток,

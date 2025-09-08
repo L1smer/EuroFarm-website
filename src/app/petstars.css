@@ -1,14 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --page-bg: #E7F0FA;
+  --page-bg: #e7f0fa;
 }
 
 @theme {
-  --color-primary: #F5F5DC;
-  --color-secondary: #8C5E3C;
-  --color-accent: #6A994E;
-  --color-text: #E76F51;
+  --color-primary: #f5f5dc;
+  --color-secondary: #8c5e3c;
+  --color-accent: #6a994e;
+  --color-text: #e76f51;
 }
 
 html,
@@ -43,13 +43,26 @@ body {
   transform: translateY(0);
 }
 
+.revealx {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: opacity 1200ms ease, transform 1200ms ease;
+  will-change: opacity, transform;
+  transition-delay: 600ms;
+}
+
+.revealx.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
 .morph-wrap {
   width: min(720px, 92vw);
   aspect-ratio: 1.25 / 1;
   position: relative;
   overflow: hidden;
   clip-path: path(
-    "M40,120 Q70,40 160,30 L540,30 Q630,30 660,110 L680,220 Q700,300 640,360 L560,430 Q500,490 410,500 L190,500 Q110,500 80,430 L60,350 Q40,290 40,240 Z"
+    "M6% 24% Q10% 8% 22% 6% L75% 6% Q88% 6% 92% 22% L95% 44% Q97% 60% 88% 72% L78% 86% Q70% 98% 58% 100% L28% 100% Q16% 100% 12% 86% L9% 70% Q6% 58% 6% 48% Z"
   );
   animation: corners 15s cubic-bezier(0.6, 0.05, 0.2, 0.95) infinite;
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.2);
@@ -99,6 +112,18 @@ body {
   }
   50% {
     transform: scale(1.09) translate(-1.5%, -1%);
+  }
+}
+
+@media (max-width: 768px) {
+  .morph-wrap {
+    aspect-ratio: 1 / 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .morph-wrap {
+    aspect-ratio: 0.8 / 1;
   }
 }
 

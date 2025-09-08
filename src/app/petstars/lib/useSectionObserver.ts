@@ -30,7 +30,7 @@ export function useSectionObserver() {
       }
 
       section
-        .querySelectorAll(".reveal")
+        .querySelectorAll(".reveal, .revealx")
         .forEach((el) => el.classList.add("is-visible"));
 
       const bg = section.dataset.bg;

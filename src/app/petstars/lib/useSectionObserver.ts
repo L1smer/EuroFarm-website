@@ -52,8 +52,8 @@ export function useSectionObserver() {
   useEffect(() => {
     observerRef.current = new IntersectionObserver(callback, {
       root: null,
-      threshold: 0.7,
-      rootMargin: "0px 0px -20%",
+      threshold: 0.1,
+      
     });
 
     if (pendingNodeRef.current) {

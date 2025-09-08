@@ -41,7 +41,7 @@ export default function OurValueSection() {
             windowWidth > 768
               ? "morph-wrap"
               : "max-w-[500px] max-h-[300px] rounded-2xl overflow-hidden"
-          } xl:mr-[-150px]`}
+          } 2xl:mr-[-150px]`}
         >
           <Image
             src="/petstars/petstars-intro.jpg"

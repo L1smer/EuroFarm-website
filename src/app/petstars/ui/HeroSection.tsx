@@ -5,7 +5,6 @@ import { useSectionObserver } from "../lib/useSectionObserver";
 
 export default function HeroSection() {
     const sectionRef = useSectionObserver()
-
     return (
     <section
       ref={sectionRef}
@@ -19,7 +18,7 @@ export default function HeroSection() {
           width={1159}
           height={400}
           alt="Логотип PetStars"
-          className="w-[472px] h-[160px]"
+          className="max-w-[320px] md:max-w-[472px] max-h-[160px]"
         />
       </div>
       <div className="mb-10 animate-bounce z-20">

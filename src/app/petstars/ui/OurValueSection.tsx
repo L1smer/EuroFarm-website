@@ -1,11 +1,16 @@
 "use client";
 import { useSectionObserver } from "../lib/useSectionObserver";
+import { useEffect, useState } from "react";
 import { playfairDisplay } from "../lib/fonts";
 import Image from "next/image";
 
 export default function OurValueSection() {
   const sectionRef = useSectionObserver();
-  const windowWidth = window.innerWidth;
+  const [windowWidth, setWindowWidth] = useState<number>(1024);
+
+  useEffect(() => {
+    setWindowWidth(window.innerWidth);
+  }, []);
   return (
     <section ref={sectionRef} className="panel" data-bg="#C6BBE5">
       <div className="flex flex-wrap gap-15 md:gap-5 justify-center items-center">
@@ -32,7 +37,11 @@ export default function OurValueSection() {
           </div>
         </div>
         <div
-          className={`${windowWidth > 768 ? "morph-wrap" : "max-w-[500px] max-h-[300px] rounded-2xl overflow-hidden"} xl:mr-[-150px]`}
+          className={`${
+            windowWidth > 768
+              ? "morph-wrap"
+              : "max-w-[500px] max-h-[300px] rounded-2xl overflow-hidden"
+          } xl:mr-[-150px]`}
         >
           <Image
             src="/petstars/petstars-intro.jpg"

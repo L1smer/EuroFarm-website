@@ -8,25 +8,7 @@ import Image from "next/image";
 export default function OurMissionSection() {
   const sectionRef = useSectionObserver();
   const localSectionRef = useRef<HTMLElement | null>(null);
-  const [showOverlay, setShowOverlay] = useState<boolean>(false);
   const [windowWidth, setWindowWidth] = useState<number>(1024);
-
-  useEffect(() => {
-    if (!localSectionRef.current) return;
-    if (!sectionRef) return;
-    setWindowWidth(window.innerWidth);
-
-    const observer = new IntersectionObserver(
-      ([entry]) => setShowOverlay(entry.isIntersecting),
-      {
-        root: null,
-        threshold: 0.1,
-      }
-    );
-
-    observer.observe(localSectionRef.current);
-    return () => observer.disconnect();
-  }, []);
 
   return (
     <section
@@ -91,7 +73,7 @@ export default function OurMissionSection() {
             />
           </div>
         </div>
-        <div className="hidden md:block">
+        <div className="hidden 2xl:block">
           <Image
             src="/petstars/petstars-mission-2.jpg"
             width={693}

@@ -36,7 +36,7 @@ export default function HeroSection() {
             paragraph="Штаб-квартира компанії A.W.P. знаходиться в Модені, Італія, та спеціалізується на виробництві високочистих фітомолекул з рослинних екстрактів для покращення здоров'я сільськогосподарських та домашніх тварин за допомогою інноваційних програм"
           />
           <LinkButton
-            href="/awp/catalog"
+            href="/awp/products"
             background="/awp/link-catalog-bg.jpg"
             className="text-white w-full lg:w-[33%] h-[260px] bg-bottom bg-cover"
             title="Відкрийте для себе всі продукти A.W.P."

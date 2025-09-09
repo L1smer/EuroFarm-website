@@ -12,7 +12,7 @@ export default function HeroSection() {
       className="relative h-screen flex flex-col w-full justify-center items-center"
       id="heroSection"
     >
-      <div className="relative flex flex-col gap-10 justify-center z-20 h-full items-center">
+      <div className="relative flex flex-col gap-10 justify-center h-full items-center">
         <Image
           src={"/petstars/petstars-logo.png"}
           width={1159}

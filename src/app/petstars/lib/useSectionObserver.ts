@@ -41,7 +41,6 @@ export function useSectionObserver() {
         if (bgImage) bgImage.style.opacity = "0";
       } else {
         const cssBg = bg.startsWith("url(") ? bg : `url("${bg}")`;
-        document.body.style.backgroundImage = cssBg;
         if (bgImage) {
           bgImage.style.backgroundImage = cssBg;
           bgImage.style.opacity = "1";

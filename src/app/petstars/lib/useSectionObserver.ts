@@ -52,7 +52,7 @@ export function useSectionObserver() {
   useEffect(() => {
     observerRef.current = new IntersectionObserver(callback, {
       root: null,
-      threshold: 0.1,
+      threshold: 0.5,
     });
 
     if (pendingNodeRef.current) {

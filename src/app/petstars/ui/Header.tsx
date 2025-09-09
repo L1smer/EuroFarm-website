@@ -16,7 +16,7 @@ export default function Header() {
   const [isOpen, setOpen] = useState<boolean>(false);
   return (
     <>
-      <header className="fixed z-10 top-0 px-5 md:px-10 w-full h-15 md:h-30 flex justify-between items-center backdrop-blur-sm">
+      <header className="fixed z-10 top-0 px-5 md:px-10 w-full py-2.5 xl:py-5 min-h-15 flex justify-between items-center backdrop-blur-sm">
         <Link href="/petstars">
           <Image
             src={"/petstars/petstars-logo.png"}

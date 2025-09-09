@@ -1,6 +1,7 @@
 import HeroSection from "./ui/HeroSection";
 import OurMissionSection from "./ui/OurMissionSection";
 import OurValueSection from "./ui/OurValueSection";
+import ProductSection from "./ui/ProductSection";
 import VisionSection from "./ui/VisionSection";
 
 export default function PetStarsHome() {
@@ -10,6 +11,7 @@ export default function PetStarsHome() {
       <OurValueSection />
       <OurMissionSection />
       <VisionSection />
+      <ProductSection />
     </div>
   );
 }

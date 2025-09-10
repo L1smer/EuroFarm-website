@@ -24,10 +24,10 @@ export default function LinkButton({
       style={{ backgroundImage: `url(${background})` }}
     >
       <div className="px-10 py-15 flex flex-col items-start gap-5 justify-start h-full w-full">
-        <h5 className={`${sora.className} antialiased text-2xl font-semibold`}>
+        <h5 className={`${sora.className} antialiased text-2xl`}>
           {title}
         </h5>
-        {paragraph && <p className="text-[16px]/7 font-semibold max-w-[900px]">{paragraph}</p>}
+        {paragraph && <p className="text-[16px]/7  max-w-[900px]">{paragraph}</p>}
       </div>
       <div className="absolute bottom-0 right-0 z-10 w-[80px] h-[70px] flex">
         <div 

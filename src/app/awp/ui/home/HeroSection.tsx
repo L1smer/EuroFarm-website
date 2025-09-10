@@ -25,7 +25,7 @@ export default function HeroSection() {
         <ContentSlider
           slides={demoSlides}
           interval={12000}
-          className="w-full rounded-2xl h-[360px] xl:h-[600px]"
+          className="w-full rounded-2xl h-[360px] 2xl:h-[600px]"
         />
         <div className="flex flex-col lg:flex-row items-center gap-5 w-full ">
           <LinkButton

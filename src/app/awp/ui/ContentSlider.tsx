@@ -149,7 +149,7 @@ export default function ContentSlider({
               role="group"
               aria-roledescription="slide"
               aria-label={`${i + 1} of ${extendedCount}`}
-              className="relative shrink-0 h-[360px] xl:h-[600px]"
+              className="relative shrink-0 h-[360px] 2xl:h-[600px]"
               style={{ width: `${100 / extendedCount}%` }}
             >
               {s.isVideo ? (
@@ -181,7 +181,7 @@ export default function ContentSlider({
               <div className="relative z-10 h-full w-full grid place-items-center text-center text-white px-6">
                 <div className="max-w-[1260px]">
                   <h2
-                    className={`${sora.className} antialiased text-3xl sm:text-5xl xl:text-[80px] font-normal leading-tight`}
+                    className={`${sora.className} antialiased text-3xl sm:text-5xl 2xl:text-[60px] font-normal leading-tight`}
                   >
                     {s.title}
                   </h2>

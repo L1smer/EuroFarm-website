@@ -15,12 +15,12 @@ export default function IntroSection({
     <section className="w-full pt-5 pb-10 bg-secondary rounded-b-3xl">
       <div
         style={{backgroundImage: `url(${background})`}}
-        className={`relative flex justify-start items-center w-[95%] mx-auto overflow-hidden md:pl-50 h-[360px] 2xl:h-[500px] bg-center bg-cover rounded-2xl`}
+        className={`relative flex justify-start items-center w-[95%] mx-auto overflow-hidden xl:pl-30 2xl:pl-50 h-[360px] 2xl:h-[500px] bg-center bg-cover rounded-2xl`}
       >
         <div className="absolute inset-0 bg-black/35" />
         <div className="flex flex-col text-white z-10 gap-[30px] max-w-[900px] p-2 md:p-5">
           <h1
-            className={`${sora.className} text-2xl sm:text-3xl md:text-4xl 2xl:text-7xl`}
+            className={`${sora.className} text-2xl sm:text-4xl md:text-5xl 2xl:text-7xl`}
           >
             {heading}
           </h1>

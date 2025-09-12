@@ -2,6 +2,7 @@ import "@/app/petstars.css";
 import { montserrat } from "./lib/fonts";
 import Header from "./ui/Header";
 import { Metadata } from "next";
+import BackToTopButton from "../(homepage)/ui/BackToTopButton";
 
 export const metadata: Metadata = {
   title: "Pet Stars",
@@ -22,10 +23,11 @@ export default function RootLayout({
     <html lang="en">
       <body
         style={{ backgroundColor: "var(--page-bg)" }}
-        className={`${montserrat.className} antialiased overflow-x-hidden`}
+        className={`relative ${montserrat.className} antialiased overflow-x-hidden`}
       >
         <Header />
-        {children}
+        <div className="mx-auto">{children}</div>
+        <BackToTopButton className={"bg-text"}/>
       </body>
     </html>
   );

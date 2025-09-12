@@ -12,7 +12,7 @@ export default function HeroSection() {
       className="relative h-screen flex flex-col w-full justify-center items-center"
       id="heroSection"
     >
-      <div className="relative flex flex-col gap-10 justify-center h-full items-center">
+      <div className="relative flex flex-col justify-center h-full items-center">
         <Image
           src={"/petstars/petstars-logo.png"}
           width={1159}
@@ -21,7 +21,7 @@ export default function HeroSection() {
           className="max-w-[300px] md:max-w-[472px] max-h-[160px]"
         />
       </div>
-      <div className="mb-10 animate-bounce z-20">
+      <div className="mb-40 animate-bounce z-20">
         <ArrowDown color="white" className="" size={60} />
       </div>
     </section>

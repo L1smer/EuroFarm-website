@@ -39,7 +39,7 @@ export default function BackToTopButton({ className }: { className: string }) {
           exit={{ transform: "translateY(60px)", opacity: 0  }}
           whileHover={{paddingTop: "40px", transition: {duration: 0.05}}}
           onClick={scrollToTop}
-          className={`group fixed bottom-12 right-12 py-[10px] px-[10px] focus:pt-[40px] rounded-full cursor-pointer transition-all duration-300 ${className}`}
+          className={`group fixed bottom-12 right-12 py-[10px] px-[10px] focus:pt-[40px] rounded-full cursor-pointer transition-all duration-300 ${className} z-40`}
         >
           <ArrowUp className="group-focus:-translate-y-8 duration-250"/>
         </motion.button>

@@ -57,7 +57,7 @@ export default function ProductSection() {
               alt="Щасливий собака — PetStars"
               priority={false}
               sizes="(max-width: 1024px) 80vw, 564px"
-              className="revealx h-auto w-[min(420px,80vw)] md:w-[420px] lg:w-[520px] xl:w-[564px]"
+              className="revealx h-auto w-[min(420px,80vw)] lg:w-[420px] xl:w-[520px]"
             />
           </div>
         </div>

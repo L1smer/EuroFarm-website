@@ -9,14 +9,20 @@ export default function BackToTopButton({ className }: { className: string }) {
 
   useEffect(() => {
     const toggleVisibility = () => {
-      if (window.scrollY > 200) {
+      const scrollPosition =
+        window.pageYOffset ||
+        document.documentElement.scrollTop ||
+        document.body.scrollTop ||
+        0;
+
+      if (scrollPosition > 200) {
         setIsVisible(true);
       } else {
         setIsVisible(false);
       }
     };
 
-    window.addEventListener("scroll", toggleVisibility);
+    window.addEventListener("scroll", toggleVisibility, { passive: true });
 
     return () => {
       window.removeEventListener("scroll", toggleVisibility);
@@ -24,10 +30,8 @@ export default function BackToTopButton({ className }: { className: string }) {
   }, []);
 
   const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+    document.documentElement.scrollTo({ top: 0, behavior: "smooth" });
+    document.body.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
@@ -36,12 +40,12 @@ export default function BackToTopButton({ className }: { className: string }) {
         <motion.button
           initial={{ transform: "translateY(60px)", opacity: 0 }}
           animate={{ transform: "translateY(0px)", opacity: 1 }}
-          exit={{ transform: "translateY(60px)", opacity: 0  }}
-          whileHover={{paddingTop: "40px", transition: {duration: 0.05}}}
+          exit={{ transform: "translateY(60px)", opacity: 0 }}
+          whileHover={{ paddingTop: "40px", transition: { duration: 0.05 } }}
           onClick={scrollToTop}
           className={`group fixed bottom-12 right-12 py-[10px] px-[10px] focus:pt-[40px] rounded-full cursor-pointer transition-all duration-300 ${className} z-40`}
         >
-          <ArrowUp className="group-focus:-translate-y-8 duration-250"/>
+          <ArrowUp className="group-focus:-translate-y-8 duration-250" />
         </motion.button>
       )}
     </AnimatePresence>
